@@ -18,7 +18,7 @@ export function Header(){
                 {/* LOGO */}
 
                 <div className="flex flex-row-reverse justify-center items-center gap-3 cursor-pointer">
-                    <img src={fish} alt="fish logo" className="w-10 rotate-180" />
+                    <img src={fish} alt="fish logo" className="w-10 h-10 rotate-180" />
                     <span className="text-3xl font-nunito">Salt&amp;Light</span>
                 </div>
 
