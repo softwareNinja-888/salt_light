@@ -22,6 +22,7 @@ export function Header(){
                     <span className="text-3xl font-nunito">Salt&amp;Light</span>
                 </div>
 
+
              
             </div>           
 
