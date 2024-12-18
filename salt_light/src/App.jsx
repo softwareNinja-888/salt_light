@@ -1,21 +1,32 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { Header } from './components/Header.jsx'
 import './App.css'
 import { Link, useNavigate } from 'react-router'
 
+
+const Data = (function(){
+  const arrData = [
+    { id: 1, name: 'churches' },
+    { id: 2, name: 'ministries' },
+    { id: 3, name: 'events' },
+    { id: 4, name: 'schools' },
+    { id: 5, name: 'business' }
+  ];
+
+  return {arrData}
+})()
 function App() {
   const navigate = useNavigate()
-  const arr = ['church','ministries','event','school','business']
+  
+
 
   return (
     <>
-      <h1 className='text-6xl text-red-700'>Ho@me</h1>
-      {arr.map(el=>{
-        return <Link to={`/${el}`} className='text-md'>{el}</Link>
-      })}
+      <div className="debug-screens">
+        <Header/>
+      </div>
     </>
   )
 }
 
-export default App
+export {App,Data}

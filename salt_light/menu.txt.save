@@ -1,0 +1,37 @@
+import React, { useState } from "react";
+import { motion } from "framer-motion"; 
+import menu from '/burgerMenu.png'
+import close from '/close.png'
+
+
+export function HamburgerMenu(props) {
+  return (
+    <nav className="flex flex-row-reverse justify-center text-black p-4 gap-14">
+        <div className="menu-toggle  md:hidden flex ">
+            <img src={props.isOpen ? `${close}`:`${menu}`} alt="Toggle Menu" aria-label="Toggle Menu" className='max-h-4 min-h-2  min-w-4 cursor-pointer' onClick={props.toggleMenu}/>
+        </div>
+        {props.isOpen &&
+        (<motion.div initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} exit={{opacity:0,y:-20}} transition={{duration:0.5}}>
+            <ul className={`${
+                props.isOpen ? "block" : "hidden" } flex flex-row md:flex md:mt-0 md:space-x-6 gap-6 `}>     
+                    <li className='text-smaller font-mont'>
+                        <a href="">Home</a>
+                    </li>
+                     <li className='text-smaller font-mont'>
+                         <a href="">Features</a>
+                    </li>
+                    <li className='text-smaller font-mont'>
+                        <a href="">Community</a>
+                    </li>
+                    <li className='text-smaller font-mont'>
+                        <a href="">Blog</a>
+                    </li>
+                    <li className='text-smaller font-mont'>
+                        <a href="">Pricing</a>
+                    </li>
+                </ul>
+        </motion.div>)
+        }
+    </nav>
+  );
+};
