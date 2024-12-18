@@ -16,6 +16,9 @@ export default {
         inter: ['inter','sans-serif'],
         roboto: ['roboto','sans-serif'],
       },
+      backgroundImage: {
+        'header': "url('/pray.webp')"
+      }
     },
   },
   plugins: [

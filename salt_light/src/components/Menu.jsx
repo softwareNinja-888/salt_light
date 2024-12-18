@@ -3,15 +3,14 @@ import { Link,NavLink} from "react-router";
 import React, { useState } from "react";
 import { motion } from "framer-motion"; 
 
-import menu from '/burgerMenu.png'
-import close from '/close.png'
+import menu from '/burgerMenu.webp'
+import close from '/close.webp'
 
 function CapFirst(text){
     return text[0].toUpperCase() +text.slice(1)
 }
 export function Menu({IsOpen,toggleMenu}){
 
-    console.log();
     
     return (
         <>
@@ -24,7 +23,9 @@ export function Menu({IsOpen,toggleMenu}){
                     <div className={`${
                         IsOpen ? "block" : "hidden" } flex flex-row md:flex md:mt-0 md:space-x-6 gap-4 `}>     
                             {Data.arrData.map(el=>{
-                                return <NavLink to={`/${el.name}`} className='text-xs font-geist' key={`${el.id}`}>{CapFirst(el.name)}</NavLink>
+                                return <motion.div whileHover={{scale:1.05, opacity:1 }} >
+                                    <NavLink to={`/${el.name}`} className='text-xs font-geist md:opacity-75' key={`${el.id}`}>{CapFirst(el.name)}</NavLink>
+                                </motion.div>
                             })}
                     </div>
                 </motion.div>)
