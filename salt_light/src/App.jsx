@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <div className="debug-screens bg-header bg-no-repeat bg-cover bg-center bg-origin-content h-96 py-6">
+      <div className="debug-screens h-64 py-6 bg-gray-200">
         <Header/>
       </div>
     </>
