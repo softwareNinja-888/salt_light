@@ -1,77 +1,4 @@
-const listingData = (function(){
-    let churches = [
-        {id:0,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:1,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:2,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:3,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:4,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:5,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:6,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:7,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:8,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:9,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:10,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'}
-    ]
-
-    let business = [
-        {id:0,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:1,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:2,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:3,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:4,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:5,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:6,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:7,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:8,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:9,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:10,name:'Bliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'}
-    ]
-
-    let ministries = [
-        {id:0,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:1,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:2,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:3,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:4,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:5,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:6,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:7,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:8,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:9,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:10,name:'Mliving waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'}
-    ]
-
-     let schools = [
-        {id:0,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:1,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:2,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:3,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:4,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:5,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:6,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:7,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:8,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:9,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:10,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'}
-    ]
-
-    let events = [
-        {id:0,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:1,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:2,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:3,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:4,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:5,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:6,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:7,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:8,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:9,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'},
-        {id:10,name:'living waters',contact:'26878381356',location:'Manzini,SZ',services:'Church services and a primary and pre-schol',mission:'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis harum numquam eos quasi repudiandae assumenda autem dolores dolorem, tempore ratione consectetur voluptas, expedita optio!'}
-    ]
-
-    return {churches,business,ministries,schools,events}
-
-})()
+// FUNCTIONS
 
 const util = (function (){
 
@@ -79,7 +6,102 @@ const util = (function (){
         return text.split(' ').map(word=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')
     }
 
-    return {capitilizeText}
+    function createChurch(id,name,contact,location,services,mission){
+        return {
+            id,
+            name,
+            contact,
+            location,
+            services,
+            mission,
+        }
+    }
+    
+    function createBusiness(id,name,contact,location,services,mission){
+        return {
+            id,
+            name,
+            contact,
+            location,
+            services,
+            mission,
+        }
+    }
+    function createMinistries(id,name,contact,location,services,mission){
+        return {
+            id,
+            name,
+            contact,
+            location,
+            services,
+            mission,
+        }
+    }
+    function createEvents(id,name,contact,location,services,mission){
+        return {
+            id,
+            name,
+            contact,
+            location,
+            services,
+            mission,
+        }
+    }function createSchools(id,name,contact,location,services,mission){
+        return {
+            id,
+            name,
+            contact,
+            location,
+            services,
+            mission,
+        }
+    }
+
+    return {capitilizeText,createBusiness,createChurch,createEvents,createMinistries,createSchools}
 })()
+
+
+// DATA :
+const listingData = (function(){
+    let churches = [
+        util.createChurch(0,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createChurch(1,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createChurch(2,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createChurch(3,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+    ]
+
+    let business = [
+        util.createBusiness(0,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createBusiness(1,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createBusiness(2,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createBusiness(3,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+    ]
+
+    let ministries = [
+        util.createMinistries(0,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createMinistries(1,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createMinistries(2,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createMinistries(3,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+    ]
+
+     let schools = [
+        util.createSchools(0,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createSchools(1,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createSchools(2,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createSchools(3,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+    ]
+
+    let events = [
+        util.createEvents(0,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createEvents(1,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createEvents(2,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+        util.createEvents(3,'new living waters','26878381356','London,UK','Church services and wonderfull worship','Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod provident dolorum autem corporis! Nulla, nobis '),
+    ]
+
+    return {churches,business,ministries,schools,events}
+
+})()
+
+
 
 export {listingData,util}

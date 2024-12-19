@@ -1,6 +1,7 @@
 import { useParams } from "react-router"
 import { listingData } from "../data/data.js"
 import { util } from "../data/data.js"
+import { ListRoot } from "./ListRoot.jsx"
 
 import phone from '/phone.webp'
 import cross from '/cross.webp'
@@ -13,7 +14,7 @@ export function Listing(){
 
     return (
         <>
-            <h1 className="text-3xl text-red-600">{title}</h1>
+            {/* <h1 className="text-3xl text-red-600">{title}</h1> */}
             <div className="flex flex-col items-center gap-6">
                 {data.map(el=>{
                     return (

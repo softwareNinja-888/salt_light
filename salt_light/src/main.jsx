@@ -3,6 +3,8 @@ import { createRoot } from 'react-dom/client'
 import { BrowserRouter,Routes,Route } from 'react-router'
 
 import { Listing } from './components/Listing.jsx'
+import { ListRoot } from './components/ListRoot.jsx'
+
 import './index.css'
 import { App } from './App.jsx'
 
@@ -11,8 +13,9 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route index element={<App />}/>
-
-        <Route path='/:title' element={<Listing/>}/>
+        <Route path='/listings' element={<ListRoot/>}>
+          <Route path=':title' element={<Listing/>}/>
+        </Route>
       </Routes>
     </BrowserRouter>
   </StrictMode>,

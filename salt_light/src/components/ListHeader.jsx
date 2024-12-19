@@ -1,16 +1,30 @@
+import { useState } from "react";
+import { util } from "../data/data"
 import { Data } from "../App.jsx"
-import {util} from '../data/data.js'
-import { Link,NavLink} from "react-router";
-import React, { useState } from "react";
+
 import { motion } from "framer-motion"; 
+import { Link,NavLink} from "react-router";
 
 import menu from '/burgerMenu.webp'
 import close from '/close.webp'
 
-export function Menu({IsOpen,toggleMenu}){
+import { Menu } from "./Menu.jsx";
+export function ListHeader({title,results}){
 
+    const [IsOpen,setIsOpen] = useState(false)
+
+    function toggleMenu(){
+        setIsOpen(!IsOpen)
+    }
+  
+    const formatedText = util.capitilizeText(title)
+    const dataLength = {results}.results.length
     return (
-        <>
+      <>
+        <div className="h-34 py-6 bg-gray-200 flex flex-col items-center gap-2 ">
+            <div className="text-2xl font-geist">{formatedText}</div>
+            {/* <div className="text-xs">{`There ${dataLength} available ${formatedText}`}</div> */}
+            
             <nav className="flex flex-col justify-center items-center text-black gap-14 p-4">
                 <div className="menu-toggle  md:hidden flex ">
                     <img src={IsOpen ? `${close}`:`${menu}`} alt="Toggle Menu" aria-label="Toggle Menu" className='max-h-4 min-h-2  min-w-4 cursor-pointer' onClick={toggleMenu}/>
@@ -28,7 +42,7 @@ export function Menu({IsOpen,toggleMenu}){
                 </motion.div>)
                 }
             </nav>
-        </>
-        
+        </div>
+      </>
     )
 }
