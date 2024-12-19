@@ -20,7 +20,7 @@ export function Listing(){
                     return (
                     <div className="flex flex-col items-center justify-center w-6/12 border border-black rounded-2xl text-sm font-geist">
                         <div className="w-full">
-                            <img src={cross} alt='image' className="w-full h-64 rounded-t-2xl" />
+                            <img src={cross} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
                         </div>
                         <div className="flex justify-between gap-6 w-full p-2">
                             <span className="">{util.capitilizeText(el.name)}</span>

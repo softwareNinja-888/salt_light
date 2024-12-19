@@ -22,7 +22,7 @@ function App() {
 
   return (
     <>
-      <div className="debug-screens h-64 py-6 bg-gray-200">
+      <div className="h-72 sm:h-56 py-6 bg-gray-200">
         <Header/>
       </div>
     </>
