@@ -50,3 +50,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
+input[type='search']::-webkit-search-cancel-button{
+    display: none;
+}
