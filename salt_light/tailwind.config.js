@@ -17,7 +17,8 @@ export default {
         roboto: ['roboto','sans-serif'],
       },
       backgroundImage: {
-        'header': "url('/pray.webp')"
+        'header': "url('/bg.webp')",
+        'header2': "url('/bg2.webp')"
       }
     },
   },

@@ -6,11 +6,9 @@ import { Link, useNavigate } from 'react-router'
 
 const Data = (function(){
   const arrData = [
-    { id: 1, name: 'churches' },
-    { id: 2, name: 'ministries' },
-    { id: 3, name: 'events' },
-    { id: 4, name: 'schools' },
-    { id: 5, name: 'business' }
+    { id: 0, name: 'churches' },
+    { id: 1, name: 'events' },
+    { id: 2, name: 'blog' },
   ];
 
   return {arrData}
@@ -18,11 +16,9 @@ const Data = (function(){
 function App() {
   const navigate = useNavigate()
   
-
-
   return (
     <>
-      <div className="h-72 sm:h-56 py-6 bg-gray-200">
+      <div className="h-96 sm:h-56 py-6 bg-gray-400 bg-cover bg-center">
         <Header/>
       </div>
     </>

@@ -4,13 +4,13 @@ import { Link, NavLink } from "react-router";
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 
-import menu from "/burgerMenu.webp";
-import close from "/close.webp";
+import menu from "/menuWhite.webp";
+import close from "/closeWhite.webp";
 
 export function Menu({ IsOpen, toggleMenu }) {
   return (
     <>
-      <nav className="flex flex-col justify-center items-center text-black gap-14 p-4">
+      <nav className="flex flex-col justify-center items-center text-white gap-14 p-4">
         {/* Toggle Button: Visible only on mobile */}
         <div className="menu-toggle sm:hidden flex">
           <img
@@ -40,7 +40,7 @@ export function Menu({ IsOpen, toggleMenu }) {
                 key={el.id}
               >
                 <NavLink
-                  to={`listings/${el.name}`}
+                  to={`/listings/${el.name}`}
                   className="text-xs font-geist md:opacity-75"
                 >
                   {util.capitilizeText(el.name)}

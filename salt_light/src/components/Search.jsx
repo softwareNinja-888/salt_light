@@ -1,5 +1,5 @@
-import lightSearch from '/lightSearch.png'
-import searchImg from '/searchImg.png'
+import lightSearch from '/lightSearch.webp'
+import searchImg from '/searchImg.webp'
 
 import React from 'react';
 
