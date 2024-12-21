@@ -12,6 +12,8 @@ export function Listing(){
 
     const data = listingData[title]
 
+    console.log(data)
+
     return (
         <>
             {/* <h1 className="text-3xl text-red-600">{title}</h1> */}
@@ -29,7 +31,7 @@ export function Listing(){
                         <div className="flex flex-col p-2 gap-2">
                             <div className="flex items-center gap-2">
                                 <img src={phone} alt="phone icon" className="w-5" />
-                                <span className="" >{el.contact}</span>
+                                {/* <span className="" >{el.contact}</span> */}
                             </div>
                             <div className="">{el.services}</div>
                         </div>

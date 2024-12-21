@@ -7,7 +7,6 @@ export function ListRoot(){
     const {title} = useParams()
 
     const data = listingData[title]
-    console.log(data);
 
     return (
         <>

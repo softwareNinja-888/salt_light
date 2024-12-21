@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { util } from "../data/data"
-import { Data } from "../App.jsx"
 
 import { motion } from "framer-motion"; 
 import { Link,NavLink, useNavigate} from "react-router";
@@ -26,8 +25,9 @@ export function ListHeader({title,results}){
     
     return (
       <>
-        <div className="h-34 sm:h-56 py-6 bg-gray-400 bg-cover bg-center">
+        <div className="flex flex-col h-96 py-6 bg-gray-400 bg-cover bg-center">
           <Header/>
+          <div className="text-center text-2xl text-white underline font-nunito mt-20">{formatedText}</div>
         </div>
       </>
     )

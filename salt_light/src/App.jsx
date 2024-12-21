@@ -3,18 +3,7 @@ import { Header } from './components/Header.jsx'
 import './App.css'
 import { Link, useNavigate } from 'react-router'
 
-
-const Data = (function(){
-  const arrData = [
-    { id: 0, name: 'churches' },
-    { id: 1, name: 'events' },
-    { id: 2, name: 'blog' },
-  ];
-
-  return {arrData}
-})()
 function App() {
-  const navigate = useNavigate()
   
   return (
     <>
@@ -25,4 +14,4 @@ function App() {
   )
 }
 
-export {App,Data}
+export {App}
