@@ -15,7 +15,7 @@ export function Header(){
     const [IsOpen,setIsOpen] = useState(false)
 
     // TO DYANMICALLY DISPLAY CONTENT
-    const [LoggedIn,setLoggedIn] = useState(false)
+    const [LoggedIn,setLoggedIn] = useState(true)
 
     // FUNCTIONS TO TOGGLE STATES
     function toggleMenu(){

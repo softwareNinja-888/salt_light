@@ -12,7 +12,7 @@ export function Listing(){
 
     const data = listingData[title]
 
-    console.log(data)
+    // console.log(data)
 
     return (
         <>
