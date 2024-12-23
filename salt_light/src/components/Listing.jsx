@@ -17,12 +17,12 @@ export function Listing(){
     return (
         <>
             {/* <h1 className="text-3xl text-red-600">{title}</h1> */}
-            <div className="flex flex-col items-center gap-6">
+            <div className="flex flex-col items-center gap-6 py-28">
                 {data.map(el=>{
                     return (
-                    <div className="flex flex-col items-center justify-center w-6/12 border border-black rounded-2xl text-sm font-geist">
+                    <div className="flex flex-col items-center justify-center w-10/12 border border-black rounded-2xl text-sm font-geist">
                         <div className="w-full">
-                            <img src={cross} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
+                            <img src={el.imgUrl} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
                         </div>
                         <div className="flex justify-between gap-6 w-full p-2">
                             <span className="">{util.capitilizeText(el.name)}</span>
@@ -30,10 +30,21 @@ export function Listing(){
                         </div>
                         <div className="flex flex-col p-2 gap-2">
                             <div className="flex items-center gap-2">
-                                <img src={phone} alt="phone icon" className="w-5" />
-                                {/* <span className="" >{el.contact}</span> */}
+                                <div className="flex items-center gap-2">
+                                    <img src={phone} alt="phone icon" className="w-5" />
+                                    <span className="" >{el.contact.phone}</span>
+                                </div>
+                                <div className="flex items-center gap-2">
+                                    <img src={phone} alt="mail icon" className="w-5" />
+                                    <span className="" >{el.contact.email}</span>
+                                </div>
                             </div>
-                            <div className="">{el.services}</div>
+
+                            <div className="flex flex-col items-center">{el.services.map(el=>{
+                                return(
+                                    <li>{el}</li>
+                                )
+                            })}</div>
                         </div>
                     </div>
                     )

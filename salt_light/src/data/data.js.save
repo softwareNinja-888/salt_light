@@ -6,30 +6,29 @@ const util = (function (){
         return text.split(' ').map(word=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')
     }
 
-    function createChurch(id, name, contact, location, services, mission, imgUrl) {
-        return {
-            id,
-            name,
-            contact,
-            location,
-            services,
-            mission,
-            imgUrl,
-            };
-        }  
-    
+    function createChurch(id, name, contact, location, services, mission, img) {
+    return {
+        id,
+        name,
+        contact,
+        location,
+        services,
+        mission,
+        img,
+   	 };
+	}    
    
-    function createEvents(id, name, contact, location, services, mission, imgUrl) {
-        return {
-            id,
-            name,
-            contact,
-            location,
-            services,
-            mission,
-            imgUrl,
-        };
-    }
+    function createEvent(id, name, contact, location, services, mission, imgUrl) {
+    return {
+        id,
+        name,
+        contact,
+        location,
+        services,
+        mission,
+        imgUrl,
+    };
+}
 
     function createDonationOption(id, title, description, amountOptions, imgUrl) {
         return {
@@ -80,15 +79,15 @@ const pages = (function(){
 // LISTING INFORMATION 
 const listingData = (function(){
     let churches = [
-        util.createChurch( 1, "Grace Community Church", { phone: "123-456-7890", email: "contact@gracechurch.com" }, "123 Main Street, Springfield, IL", ["Sunday Service", "Youth Ministry", "Bible Study"], "To spread the gospel and nurture spiritual growth.", "/churches/churchA1.webp"), 
+        util.createChurch( 1, "Grace Community Church", { phone: "123-456-7890", email: "contact@gracechurch.com" }, "123 Main Street, Springfield, IL", ["Sunday Service", "Youth Ministry", "Bible Study"], "To spread the gospel and nurture spiritual growth.", "churches/churchA1.webp"), 
         
-        util.createChurch( 2, "Hope Chapel", { phone: "987-654-3210", email: "info@hopechapel.org" }, "456 Elm Avenue, Greenville, SC", ["Morning Prayer", "Community Outreach", "Choir Practice"], "To bring hope to the community through faith and service.", "/churches/churchB1.webp" ), 
+        util.createChurch( 2, "Hope Chapel", { phone: "987-654-3210", email: "info@hopechapel.org" }, "456 Elm Avenue, Greenville, SC", ["Morning Prayer", "Community Outreach", "Choir Practice"], "To bring hope to the community through faith and service.", "churches/churchB1.webp" ), 
         
-        util.createChurch( 3, "Faith Life Center", { phone: "555-678-1234", email: "hello@faithlife.org" }, "789 Pine Road, Austin, TX", ["Worship Services", "Children's Ministry", "Marriage Counseling"], "To empower individuals to live a life of faith and purpose.", "/churches/churchC1.webp" ), 
+        util.createChurch( 3, "Faith Life Center", { phone: "555-678-1234", email: "hello@faithlife.org" }, "789 Pine Road, Austin, TX", ["Worship Services", "Children's Ministry", "Marriage Counseling"], "To empower individuals to live a life of faith and purpose.", "churches/churchC1.webp" ), 
         
-        util.createChurch( 4, "Light of the World Church", { phone: "444-222-1111", email: "contact@lightworld.com" }, "321 Oak Street, Miami, FL", ["Healing Services", "Discipleship Training", "Community Dinners"], "To be a beacon of light in the world, sharing God's love.", "/churches/churchD1.webp" ), 
+        util.createChurch( 4, "Light of the World Church", { phone: "444-222-1111", email: "contact@lightworld.com" }, "321 Oak Street, Miami, FL", ["Healing Services", "Discipleship Training", "Community Dinners"], "To be a beacon of light in the world, sharing God's love.", "churches/churchD1.webp" ), 
         
-        util.createChurch( 5, "Kingdom Fellowship", { phone: "333-999-7777", email: "kingdom@fellowship.org" }, "654 Cedar Lane, Denver, CO", ["Evening Worship", "Men's Fellowship", "Missionary Support"], "To build a strong, united community rooted in the Kingdom of God.", "/churches/churchE1.webp" ) 
+        util.createChurch( 5, "Kingdom Fellowship", { phone: "333-999-7777", email: "kingdom@fellowship.org" }, "654 Cedar Lane, Denver, CO", ["Evening Worship", "Men's Fellowship", "Missionary Support"], "To build a strong, united community rooted in the Kingdom of God.", "churches/churchE1.webp" ) 
        
     ]
 
