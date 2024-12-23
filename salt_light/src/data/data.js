@@ -183,15 +183,15 @@ const listingData = (function(){
 
     let events = [
 
-        util.createEvents( 1, "Youth Revival Conference", { phone: "123-456-7890", email: "events@gracechurch.com" }, "Grace Community Church, Springfield, IL", ["Worship Sessions", "Guest Speakers", "Prayer Workshops"], "To inspire the next generation to live with purpose and passion for God.", "/images/events/youth-revival-conference.jpg" ), 
+        util.createEvents( 1, "Youth Revival Conference", { phone: "123-456-7890", email: "events@gracechurch.com" }, "Grace Community Church, Springfield, IL", ["Worship Sessions", "Guest Speakers", "Prayer Workshops"], "To inspire the next generation to live with purpose and passion for God.", "/events/eventsA1.webp" ), 
 
-        util.createEvents( 2, "Christmas Carol Night", { phone: "987-654-3210", email: "info@hopechapel.org" }, "Hope Chapel, Greenville, SC", ["Carol Singing", "Nativity Play", "Community Feast"], "Celebrating the joy and love of Christmas with the community.", "/images/events/christmas-carol-night.jpg" ), 
+        util.createEvents( 2, "Christmas Carol Night", { phone: "987-654-3210", email: "info@hopechapel.org" }, "Hope Chapel, Greenville, SC", ["Carol Singing", "Nativity Play", "Community Feast"], "Celebrating the joy and love of Christmas with the community.", "/events/eventsB1.webp" ), 
 
-        util.createEvents( 3, "Faith Builders Workshop", { phone: "555-678-1234", email: "workshop@faithlife.org" }, "Faith Life Center, Austin, TX", ["Leadership Training", "Bible Study", "Team Building"], "Equipping individuals to lead and serve with strong faith and conviction.", "/images/events/faith-builders-workshop.jpg" ), 
+        util.createEvents( 3, "Faith Builders Workshop", { phone: "555-678-1234", email: "workshop@faithlife.org" }, "Faith Life Center, Austin, TX", ["Leadership Training", "Bible Study", "Team Building"], "Equipping individuals to lead and serve with strong faith and conviction.", "/events/eventsC1.webp" ), 
 
-        util.createEvents( 4, "Healing & Deliverance Crusade", { phone: "444-222-1111", email: "events@lightworld.com" }, "Light of the World Church, Miami, FL", ["Healing Prayers", "Testimonies", "Intercessory Worship"], "Bringing hope and healing to the brokenhearted through the power of God.", "/images/events/healing-crusade.jpg" ), 
+        util.createEvents( 4, "Healing & Deliverance Crusade", { phone: "444-222-1111", email: "events@lightworld.com" }, "Light of the World Church, Miami, FL", ["Healing Prayers", "Testimonies", "Intercessory Worship"], "Bringing hope and healing to the brokenhearted through the power of God.", "/events/eventsD1.webp" ), 
 
-        util.createEvents( 5, "Community Outreach Day", { phone: "333-999-7777", email: "outreach@fellowship.org" }, "Kingdom Fellowship, Denver, CO", ["Food Drive", "Medical Checkups", "Clothing Donations"], "Serving the community with love and compassion to reflect Gods kingdom.", "/images/events/community-outreach-day.jpg" ) ];
+        util.createEvents( 5, "Community Outreach Day", { phone: "333-999-7777", email: "outreach@fellowship.org" }, "Kingdom Fellowship, Denver, CO", ["Food Drive", "Medical Checkups", "Clothing Donations"], "Serving the community with love and compassion to reflect Gods kingdom.", "/events/eventsE1.webp" ) ];
 
 
     return {churches,blog,donate,events}

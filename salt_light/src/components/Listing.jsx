@@ -28,7 +28,7 @@ export function Listing(){
                             <span className="">{util.capitilizeText(el.name)}</span>
                             <span className="">{el.location}</span>
                         </div>
-                        <div className="flex flex-col p-2 gap-2">
+                        <div className="flex flex-col p-2t gap-2">
                             <div className="flex items-center gap-2">
                                 <div className="flex items-center gap-2">
                                     <img src={phone} alt="phone icon" className="w-5" />
