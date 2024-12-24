@@ -32,12 +32,18 @@ const util = (function (){
     }
 
     function createDonationOption(id, title, description, amountOptions, imgUrl) {
+        const maxLength = 60; // Adjust this value to set the desired summary length
+        const summary = description.length > maxLength
+            ? description.slice(0, maxLength) + "..."
+            : description;
+
         return {
             id,
             title,
             description,
             amountOptions, // Array of suggested donation amounts
             imgUrl,
+            summary
         };
     }
 
