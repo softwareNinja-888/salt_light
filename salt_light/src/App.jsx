@@ -7,7 +7,7 @@ function App() {
   
   return (
     <>
-      <div className="h-96 sm:h-56 py-6 bg-gray-400 bg-cover bg-center">
+      <div className="debug-screens h-96 sm:h-56 py-6 bg-gray-400 bg-cover bg-center">
         <Header/>
       </div>
     </>
