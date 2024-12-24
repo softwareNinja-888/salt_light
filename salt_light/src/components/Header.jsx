@@ -4,6 +4,8 @@ import { useState } from "react"
 import { Search } from "./Search.jsx"
 import { Button } from "./Button.jsx"
 
+import { useAuth } from "./AuthContext.jsx"
+
 import { pages } from "../data/data.js";
 
 // import { motion } from "motion"
@@ -11,18 +13,16 @@ import { pages } from "../data/data.js";
 import fish from '/fishWhite.webp'
 export function Header(){
 
+
     // FOR MENU
     const [IsOpen,setIsOpen] = useState(false)
 
     // TO DYANMICALLY DISPLAY CONTENT
-    const [LoggedIn,setLoggedIn] = useState(true)
+    const {isLoggedIn,login,logout} = useAuth()
 
     // FUNCTIONS TO TOGGLE STATES
     function toggleMenu(){
         setIsOpen(!IsOpen)
-    }
-    function toggleLogin(){
-      setLoggedIn(!LoggedIn)
     }
 
     return (
@@ -38,9 +38,9 @@ export function Header(){
 
                     {/* BUTTONS */}
                     <div className="flex gap-2">
-                        {LoggedIn ? <Button name={'Profile'} fontSize="sm" page="/profile"/> : <>
+                        {isLoggedIn ? <Button name={'Profile'} fontSize="sm" page="/profile"/> : <>
                             <Button name="Log in" page="/login"/>
-                            <Button name="Sign Up" page="/signin"/>
+                            <Button name="Sign Up" page="/signup"/>
                         </>}
                     </div>
                 </div>           
@@ -51,11 +51,10 @@ export function Header(){
             </div>
             
             <div className="">
-
                 {/* SEACRH */}
                 <Search/>
             </div>
-
         </>
     )
 }
+
