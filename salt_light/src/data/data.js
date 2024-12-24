@@ -65,7 +65,19 @@ const util = (function (){
         };
     }
 
-    return {capitilizeText,createChurch,createEvents,createDonationOption,createBlog}
+    function formatMoney (amount,currency){
+        const formatAmount = new Intl.NumberFormat(`en-ZA`,{
+            style: 'currency',
+            currency: `${currency}`,
+            useGrouping: true,
+            minimumFractionDigits:0,
+            maximumFractionDigits:0,
+        }).format(amount)
+    
+        return `${formatAmount}`
+    }
+
+    return {capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney}
 })()
 
 
@@ -207,3 +219,5 @@ const listingData = (function(){
 
 
 export {listingData,util,pages}
+
+
