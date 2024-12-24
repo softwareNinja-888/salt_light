@@ -36,6 +36,13 @@ const UserForm = () => {
         alert("Passwords do not match!");
         return;
       }
+
+      const userExists = listingData.users.some(el=> el.name === formData.name)
+
+      if(userExists) {
+        alert("Username already picked. Try something else.")
+        return;
+      }
   
       // Use the factory function to create and store the user
       const newUser = util.createUser(
@@ -44,10 +51,7 @@ const UserForm = () => {
         formData.role,
         formData.password
       );
-  
-      console.log("New User Created:", newUser);
-      console.log("All Users:", listingData.users);
-  
+
       // Reset form
       setFormData({
         name: "",
@@ -64,7 +68,7 @@ const UserForm = () => {
     }
 
     return (
-    <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
+      <form onSubmit={handleSubmit} className="max-w-md mx-auto p-4 bg-white shadow-lg rounded-md">
         <h2 className="text-2xl font-semibold mb-4">Create New User</h2>
 
           {/* Name */}

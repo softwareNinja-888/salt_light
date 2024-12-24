@@ -231,9 +231,10 @@ const listingData = (function(){
         util.createEvents( 5, "Community Outreach Day", { phone: "333-999-7777", email: "outreach@fellowship.org" }, "Kingdom Fellowship, Denver, CO", ["Food Drive", "Medical Checkups", "Clothing Donations"], "Serving the community with love and compassion to reflect Gods kingdom.", "/events/eventsE1.webp" ) ];
 
     
-    let users = []
-
-console.log(users)
+    let users = [
+        {name:'jamiew',email:'hi@mail',role:'mail',password:'ji'},
+    ]
+    
     return {churches,blog,donate,events,users}
 
 })()

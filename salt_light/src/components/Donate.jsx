@@ -14,7 +14,7 @@ export function Donate(){
             
             <div className="">
                 <Header/>
-                <div className="text-center text-2xl text-white underline font-nunito mt-20">{formatedText}</div>
+                <div className="text-center text-2xl underline font-nunito mt-10">{formatedText}</div>
             </div>        
             
             <main>

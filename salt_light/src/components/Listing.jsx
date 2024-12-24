@@ -16,8 +16,7 @@ export function Listing(){
 
     return (
         <>
-            {/* <h1 className="text-3xl text-red-600">{title}</h1> */}
-            <div className="flex flex-col items-center gap-6 py-28">
+            <div className="flex flex-col items-center gap-6 py-12">
                 {data.map(el=>{
                     return (
                     <div key={el.id} className="flex flex-col items-center justify-center w-10/12 border border-black rounded-2xl text-sm font-geist">

@@ -9,6 +9,7 @@ import { Blog } from './components/Blog.jsx'
 import { Donate } from './components/Donate.jsx'
 import { SignUp } from './components/SignUp.jsx'
 import { Profile } from './components/Profile.jsx'
+import { NotFound } from './components/NotFound.jsx'
 
 
 import './index.css'
@@ -32,6 +33,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/signup' element={<SignUp/>}/>
 
           <Route path='/profile/:name' element={<Profile/>}/>
+          <Route path='/404' element={<NotFound/>}/>
   
         </Routes>
       </BrowserRouter>

@@ -37,7 +37,7 @@ export function Header(){
                     {/* BUTTONS */}
                     <div className="flex gap-2">
                     
-                        {IsLoggedIn ? <Button name={ActiveUser} fontSize="sm" page={`/profile/${ActiveUser}`}/> : <>
+                        {IsLoggedIn ? <Button name={ActiveUser} fontSize="sm" page={`/profile/${ActiveUser}`} width="w-32"/> : <>
                             <Button name="Log in" page="/login"/>
                             <Button name="Sign Up" page="/signup"/>
                         </>}
