@@ -2,6 +2,10 @@ import { Header } from "./Header.jsx"
 import { Menu } from "./Menu.jsx";
 import { Link } from "react-router"
 import { pages } from "../data/data.js";
+import { UserForm } from "./Form.jsx";
+
+
+
 
 import fish from '/fishWhite.webp'
 import place from '/place.webp'
@@ -10,6 +14,7 @@ import { useAuth } from "./AuthContext.jsx"
 export function SignUp(){
 
     const {IsLoggedIn,login,logout,IsOpen,toggleMenu} = useAuth()
+
 
     return (
         <>
@@ -32,11 +37,11 @@ export function SignUp(){
                 <div className="text-center text-2xl text-white underline font-nunito mt-20">Sign Up</div>
 
                 <div className="">
-                    <form action="" method="post">
-                        <label htmlFor="name"></label>
-                    </form>
+                    <UserForm/>
                 </div>
             </div>
         </>
     )
+
 }
+

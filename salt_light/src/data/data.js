@@ -1,3 +1,5 @@
+import bcrypt from 'bcryptjs'
+
 // FUNCTIONS
 
 const util = (function (){
@@ -65,6 +67,25 @@ const util = (function (){
         };
     }
 
+    const createUser = (name, email, role, password) => {
+        
+        // const bcrypt = require("bcryptjs");
+        
+        // Create a user object
+        const user = {
+            name,
+            email,
+            role,
+            passwordHash: bcrypt.hashSync(password, 10), // Hash password
+            createdAt: new Date(),
+        };
+
+        listingData.users.push(user)
+
+    
+    return {user};
+};
+
     function formatMoney (amount,currency){
         const formatAmount = new Intl.NumberFormat(`en-ZA`,{
             style: 'currency',
@@ -77,7 +98,7 @@ const util = (function (){
         return `${formatAmount}`
     }
 
-    return {capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney}
+    return {capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney,createUser}
 })()
 
 
@@ -211,13 +232,20 @@ const listingData = (function(){
 
         util.createEvents( 5, "Community Outreach Day", { phone: "333-999-7777", email: "outreach@fellowship.org" }, "Kingdom Fellowship, Denver, CO", ["Food Drive", "Medical Checkups", "Clothing Donations"], "Serving the community with love and compassion to reflect Gods kingdom.", "/events/eventsE1.webp" ) ];
 
+    
+    let users = []
 
-    return {churches,blog,donate,events}
+console.log(users)
+    return {churches,blog,donate,events,users}
 
 })()
 
 
-
 export {listingData,util,pages}
+
+//////////////////////////////////////
+
+
+
 
 

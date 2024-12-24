@@ -13,8 +13,13 @@ export function AuthProvider({ children }) {
     setIsOpen(!IsOpen)
   }
 
-  const login = () => setIsLoggedIn(true);
-  const logout = () => setIsLoggedIn(false);
+  function login(){
+    setIsLoggedIn(true);
+  }
+
+  function logout(){
+    setIsLoggedIn(false);
+  }
 
   return (
     <AuthContext.Provider value={{ IsLoggedIn, login, logout,IsOpen,toggleMenu }}>

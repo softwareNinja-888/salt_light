@@ -15,15 +15,12 @@ export function Header(){
 
 
     // FOR MENU
-    const [IsOpen,setIsOpen] = useState(false)
+    // const [IsOpen,setIsOpen] = useState(false)
 
     // TO DYANMICALLY DISPLAY CONTENT
-    const {isLoggedIn,login,logout} = useAuth()
+    const {IsLoggedIn, login, logout,IsOpen,toggleMenu} = useAuth()
 
     // FUNCTIONS TO TOGGLE STATES
-    function toggleMenu(){
-        setIsOpen(!IsOpen)
-    }
 
     return (
         <>
@@ -38,7 +35,8 @@ export function Header(){
 
                     {/* BUTTONS */}
                     <div className="flex gap-2">
-                        {isLoggedIn ? <Button name={'Profile'} fontSize="sm" page="/profile"/> : <>
+                    
+                        {IsLoggedIn ? <Button name={'Profile'} fontSize="sm" page="/profile"/> : <>
                             <Button name="Log in" page="/login"/>
                             <Button name="Sign Up" page="/signup"/>
                         </>}
@@ -46,7 +44,7 @@ export function Header(){
                 </div>           
 
                 {/* MENU */}
-                <Menu IsOpen={IsOpen} setIsOpen={setIsOpen} toggleMenu={()=>{toggleMenu()}} list={pages.pagesData} axis={'row'}/>
+                <Menu IsOpen={IsOpen} toggleMenu={()=>{toggleMenu()}} list={pages.pagesData} axis={'row'}/>
 
             </div>
             

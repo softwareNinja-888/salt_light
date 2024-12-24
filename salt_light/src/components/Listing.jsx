@@ -3,6 +3,8 @@ import { listingData } from "../data/data.js"
 import { util } from "../data/data.js"
 import { ListRoot } from "./ListRoot.jsx"
 
+import { v4 as uuidv4 } from "uuid"
+
 import phone from '/phone.webp'
 import cross from '/cross.webp'
 
@@ -12,15 +14,13 @@ export function Listing(){
 
     const data = listingData[title]
 
-    // console.log(data)
-
     return (
         <>
             {/* <h1 className="text-3xl text-red-600">{title}</h1> */}
             <div className="flex flex-col items-center gap-6 py-28">
                 {data.map(el=>{
                     return (
-                    <div className="flex flex-col items-center justify-center w-10/12 border border-black rounded-2xl text-sm font-geist">
+                    <div key={el.id} className="flex flex-col items-center justify-center w-10/12 border border-black rounded-2xl text-sm font-geist">
                         <div className="w-full">
                             <img src={el.imgUrl} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
                         </div>
@@ -40,11 +40,12 @@ export function Listing(){
                                 </div>
                             </div>
 
-                            <div className="flex flex-col items-center">{el.services.map(el=>{
+                            <ul className="flex flex-col items-center">
+                                {el.services.map((el,ind)=>{
                                 return(
-                                    <li>{el}</li>
+                                    <li key={uuidv4()}>{el}</li>
                                 )
-                            })}</div>
+                            })}</ul>
                         </div>
                     </div>
                     )
