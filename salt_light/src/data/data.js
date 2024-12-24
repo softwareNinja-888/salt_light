@@ -137,7 +137,7 @@ const listingData = (function(){
             "2024-12-15",
             "Prayer is the cornerstone of every believer's life. In this blog, we explore how prayer strengthens our relationship with God and transforms our lives.",
             ["Prayer", "Faith", "Spiritual Growth"],
-            "/images/blogs/power-of-prayer.jpg"
+            "/blog/blogB1.webp"
         ),
         util.createBlog(
             2,
@@ -146,7 +146,7 @@ const listingData = (function(){
             "2024-12-10",
             "Grace is a gift freely given by God. Learn about the significance of grace in our daily walk and how it impacts our understanding of salvation.",
             ["Grace", "Salvation", "Christian Life"],
-            "/images/blogs/understanding-grace.jpg"
+            "/blog/blogC1.webp"
         ),
         util.createBlog(
             3,
@@ -155,7 +155,7 @@ const listingData = (function(){
             "2024-11-30",
             "Discover what it means to live a purpose-driven life. This blog dives into biblical principles that guide us to find and fulfill our God-given purpose.",
             ["Purpose", "Biblical Living", "Christian Inspiration"],
-            "/images/blogs/living-with-purpose.jpg"
+            "/blog/blogA1.webp"
         ),
         util.createBlog(
             4,
@@ -164,7 +164,7 @@ const listingData = (function(){
             "2024-12-01",
             "Faith flourishes in community. Explore the importance of fellowship and how being part of a church strengthens your spiritual journey.",
             ["Community", "Fellowship", "Church Life"],
-            "/images/blogs/role-of-community.jpg"
+            "/blog/blogD1.webp"
         ),
         util.createBlog(
             5,
@@ -173,7 +173,7 @@ const listingData = (function(){
             "2024-12-05",
             "Fear is a common human experience, but faith in God can help us overcome it. This blog offers practical tips for trusting God in the face of fear.",
             ["Faith", "Fear", "Trust in God"],
-            "/images/blogs/overcoming-fear.jpg"
+            "/blog/blogE1.webp"
         )
     ];
         
