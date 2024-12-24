@@ -18,12 +18,13 @@ export function Header(){
     // const [IsOpen,setIsOpen] = useState(false)
 
     // TO DYANMICALLY DISPLAY CONTENT
-    const {IsLoggedIn, login, logout,IsOpen,toggleMenu} = useAuth()
+    const {IsLoggedIn, login, logout,IsOpen,toggleMenu,ActiveUser} = useAuth()
 
     // FUNCTIONS TO TOGGLE STATES
 
     return (
         <>
+            <div className="flex flex-col h-96 py-6 bg-gray-400 bg-cover bg-center">
             <div className="sm:flex sm:flex-row sm:justify-around">
                 <div className="flex justify-between px-2 mb-8">
 
@@ -36,7 +37,7 @@ export function Header(){
                     {/* BUTTONS */}
                     <div className="flex gap-2">
                     
-                        {IsLoggedIn ? <Button name={'Profile'} fontSize="sm" page="/profile"/> : <>
+                        {IsLoggedIn ? <Button name={ActiveUser} fontSize="sm" page={`/profile/${ActiveUser}`}/> : <>
                             <Button name="Log in" page="/login"/>
                             <Button name="Sign Up" page="/signup"/>
                         </>}
@@ -52,6 +53,7 @@ export function Header(){
                 {/* SEACRH */}
                 <Search/>
             </div>
+        </div>
         </>
     )
 }

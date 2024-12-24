@@ -69,8 +69,6 @@ const util = (function (){
 
     const createUser = (name, email, role, password) => {
         
-        // const bcrypt = require("bcryptjs");
-        
         // Create a user object
         const user = {
             name,

@@ -5,7 +5,7 @@ import { useAuth } from "./AuthContext.jsx";
 
 const UserForm = () => {
     const navigate = useNavigate()
-    const {IsLoggedIn,login,logout,IsOpen,toggleMenu} = useAuth()
+    const {IsLoggedIn,signup,logout,IsOpen,toggleMenu} = useAuth()
 
 
     const [formData, setFormData] = useState({
@@ -56,8 +56,11 @@ const UserForm = () => {
         password: "",
         confirmPassword: "",
       });
-      console.log(login())
-      navigate('/')
+
+      const userData = formData.name
+    
+      signup(userData)
+      navigate(`/profile/${formData.name}`)
     }
 
     return (

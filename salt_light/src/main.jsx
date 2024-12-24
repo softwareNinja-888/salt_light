@@ -8,6 +8,8 @@ import { ListRoot } from './components/ListRoot.jsx'
 import { Blog } from './components/Blog.jsx'
 import { Donate } from './components/Donate.jsx'
 import { SignUp } from './components/SignUp.jsx'
+import { Profile } from './components/Profile.jsx'
+
 
 import './index.css'
 import { App } from './App.jsx'
@@ -28,6 +30,8 @@ createRoot(document.getElementById('root')).render(
           <Route path='/donate' element={<Donate/>}/>
   
           <Route path='/signup' element={<SignUp/>}/>
+
+          <Route path='/profile/:name' element={<Profile/>}/>
   
         </Routes>
       </BrowserRouter>

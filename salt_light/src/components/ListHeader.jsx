@@ -25,7 +25,7 @@ export function ListHeader({title,results}){
     
     return (
       <>
-        <div className="flex flex-col h-96 py-6 bg-gray-400 bg-cover bg-center">
+        <div className="">
           <Header/>
           <div className="text-center text-2xl text-white underline font-nunito mt-20">{formatedText}</div>
         </div>
