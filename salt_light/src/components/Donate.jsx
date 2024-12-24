@@ -21,7 +21,7 @@ export function Donate(){
                 {data.map(el=>{
                    return( <div className="flex flex-col justify-center items-center w-8/12 border border-black rounded-2xl text-sm font-geist p-2 m-auto mt-10">
                         <div className="w-full">
-                            <img src={place} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
+                            <img src={el.imgUrl} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
                         </div>
 
                         <div className="flex flex-col">

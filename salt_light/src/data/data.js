@@ -166,35 +166,35 @@ const listingData = (function(){
             "Support the Mission",
             "Help us spread the Gospel of Jesus Christ by supporting our mission activities locally and globally.",
             [10, 25, 50, 100],
-            "/images/donations/support-mission.jpg"
+            "/donations/donateA1.webp"
         ),
         util.createDonationOption(
             2,
             "Sponsor a Child",
             "Your donation will provide essential needs like food, education, and healthcare for children in need.",
             [20, 50, 100, 200],
-            "/images/donations/sponsor-child.jpg"
+            "/donations/donateB1.webp"
         ),
         util.createDonationOption(
             3,
             "Build a Church",
             "Contribute to the construction of churches in underserved communities to provide a place of worship.",
             [50, 100, 500, 1000],
-            "/images/donations/build-church.jpg"
+            "/donations/donateE1.webp"
         ),
         util.createDonationOption(
             4,
             "Bible Distribution",
             "Help us distribute Bibles to those who don't have access to the Word of God.",
             [5, 10, 25, 50],
-            "/images/donations/bible-distribution.jpg"
+            "/donations/donateD1.webp"
         ),
         util.createDonationOption(
             5,
             "Disaster Relief",
             "Support communities affected by natural disasters with relief supplies and recovery efforts.",
             [25, 50, 100, 250],
-            "/images/donations/disaster-relief.jpg"
+            "/donations/donateC1.webp"
         )
     ];
        
