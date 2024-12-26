@@ -47,7 +47,7 @@ export function Menu({ IsOpen, toggleMenu ,list=[],axis='row'}) {
                     key={el.id}
                   >
                       <NavLink
-                          to={el.name === 'blog' || el.name === 'donate'? `/${el.name}` : `/listings/${el.name}`}
+                          to={`/pages/${el.name}`}
                           className="text-xs font-geist md:opacity-75"
                         >
                           {util.capitilizeText(el.name)}

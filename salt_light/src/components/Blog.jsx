@@ -8,10 +8,10 @@ export function Blog(){
     
     return (
         <>
-            <div className="">
+            {/* <div className="">
                 <Header/>
                 <div className="text-center text-2xl underline font-nunito mt-10">{formatedText}</div>
-            </div>        
+            </div>         */}
             
             <main>
                 {data.map(el=>{

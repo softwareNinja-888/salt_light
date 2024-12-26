@@ -1,4 +1,4 @@
-import { useParams } from "react-router"
+import { Outlet, useParams } from "react-router"
 import { listingData } from "../data/data.js"
 import { util } from "../data/data.js"
 import { useNavigate } from "react-router"
@@ -12,16 +12,19 @@ import cross from '/cross.webp'
 export function Listing(){
 
     const {title} = useParams()
+    const {page} = useParams()
 
-    const data = listingData[title]
+    const data = listingData[title || page]
     const navigate = useNavigate()
 
+
     function handleNavigation(church){
-        navigate(`/listings/${title}/${church}`)
+        navigate(`/pages/${title}/${church}`)
     }
 
     return (
         <>
+
             <div className="flex flex-col items-center gap-6 py-12">
                 {data.map(el=>{
                     return (

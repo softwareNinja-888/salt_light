@@ -11,6 +11,9 @@ import { SignUp } from './components/SignUp.jsx'
 import { Profile } from './components/Profile.jsx'
 import { NotFound } from './components/NotFound.jsx'
 import { Church } from './components/Church.jsx'
+import { Events } from './components/Events.jsx'
+import { Layout } from './components/Layout.jsx'
+import { HandleElement } from './components/HandleElement.jsx'
 
 
 import './index.css'
@@ -22,19 +25,15 @@ createRoot(document.getElementById('root')).render(
       <BrowserRouter>
         <Routes>
           <Route index element={<App />}/>
-  
-          <Route path='/listings' element={<ListRoot/>}>
-            <Route path=':title' element={<Listing/>}/>
-          </Route>
 
-          <Route path='/listings/:title/:church' element={<Church/>}/>
-  
-          <Route path='/blog' element={<Blog/>}/>
-  
-          <Route path='/donate' element={<Donate/>}/>
-  
+          <Route path='/pages' element={<Layout/>}>
+              <Route path=':page' element={<Listing/>} />
+              <Route path=':page/:element' element={<HandleElement/>}/>
+              <Route path='blog' element={<Blog/>}/>
+              <Route path='donate' element={<Donate/>}/>
+          </Route>  
+
           <Route path='/signup' element={<SignUp/>}/>
-
           <Route path='/profile/:name' element={<Profile/>}/>
           <Route path='/404' element={<NotFound/>}/>
   

@@ -7,16 +7,8 @@ export function Donate(){
 
     const data = listingData['donate']
     
-    const formatedText = 'Donate'
-    
     return (
-        <>
-            
-            <div className="">
-                <Header/>
-                <div className="text-center text-2xl underline font-nunito mt-10">{formatedText}</div>
-            </div>        
-            
+        <>      
             <main>
                 {data.map(el=>{
                    return( <div className="flex flex-col justify-center items-center w-8/12 border border-black rounded-2xl text-sm font-geist p-2 m-auto mt-10">

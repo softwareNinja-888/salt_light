@@ -7,15 +7,15 @@ import { Button } from "./Button.jsx"
 
 import email from '/email.webp'
 import phone from '/phone.webp'
-export function Church(){
+export function Events(){
 
-    const {church} = useParams()
+    const {events} = useParams()
 
-    const data = listingData.churches
+    const data = listingData.events
 
-    console.log(church)
-    const churchData = data.find(el=> el.name === church)
-    console.log(churchData)
+    console.log(events)
+    const eventsData = data.find(el=> el.name === events)
+    console.log(eventsData)
     return (
         <>
 
@@ -24,21 +24,21 @@ export function Church(){
             </div>
 
             <div className="flex items-center justify-center text-2xl py-4 underline font-lora">
-                {churchData.name}
+                {eventsData.name}
             </div>
             <div className="w-full flex justify-center">
-                <img src={churchData.imgUrl} alt='image' className="w-9/12 h-72 rounded-t-2xl" loading="lazy"/>
+                <img src={eventsData.imgUrl} alt='image' className="w-9/12 h-72 rounded-t-2xl" loading="lazy"/>
             </div>
             <div className="w-full flex justify-center font-nunito text-sm">
-                Located at: {churchData.location}
+                Located at: {eventsData.location}
             </div>
             <div className="text-base font-fira font-bold w-8/12 m-auto flex justify-center items-center mt-8">
-                {churchData.mission}
+                {eventsData.mission}
             </div> 
             <div className="flex flex-col items-center">
                 <div className="text-xl font-geist mt-6 underline">Our Services</div>
                 <ul className="flex flex-col items-center text-xs py-3">
-                    {churchData.services.map((el,ind)=>{
+                    {eventsData.services.map((el,ind)=>{
                     return(
                         <li key={uuidv4()}>{el}</li>
                     )
@@ -51,11 +51,11 @@ export function Church(){
                 <div className="mt-5 flex flex-row gap-5">
                     <div className="flex items-center gap-2">
                         <img className="w-5" src={phone} alt="" />
-                        {churchData.contact.phone}
+                        {eventsData.contact.phone}
                     </div>
                     <div className="flex items-center gap-2">
                         <img className="w-5" src={email} alt="" />
-                        {churchData.contact.email}
+                        {eventsData.contact.email}
                     </div>
                 </div>
             </div>
