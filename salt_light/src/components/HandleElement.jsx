@@ -5,8 +5,6 @@ import { v4 as uuidv4 } from "uuid"
 import phone from '/phone.webp'
 import email from '/email.webp'
 
-import { Footer } from "./Footer"
-import { filter } from "lodash"
 
 export function HandleElement(){
     const {element} = useParams()

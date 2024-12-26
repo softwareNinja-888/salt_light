@@ -6,7 +6,6 @@ export function Layout(){
     return (
        <>
             <Header/>
-            <span className="text-6xl">new</span>
             <main>
                 <Outlet/>
             </main>

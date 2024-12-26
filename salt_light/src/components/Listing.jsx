@@ -2,9 +2,6 @@ import { Outlet, useParams } from "react-router"
 import { listingData } from "../data/data.js"
 import { util } from "../data/data.js"
 import { useNavigate } from "react-router"
-import { ListRoot } from "./ListRoot.jsx"
-
-import { v4 as uuidv4 } from "uuid"
 
 import phone from '/phone.webp'
 import cross from '/cross.webp'
@@ -19,7 +16,7 @@ export function Listing(){
 
 
     function handleNavigation(church){
-        navigate(`/pages/${title}/${church}`)
+        navigate(`/pages/${title || page}/${church}`)
     }
 
     return (

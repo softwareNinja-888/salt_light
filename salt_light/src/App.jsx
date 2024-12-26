@@ -2,14 +2,19 @@ import { useState } from 'react'
 import { Header } from './components/Header.jsx'
 import './App.css'
 import { Link, useNavigate } from 'react-router'
+import { useAuth } from './components/AuthContext.jsx'
 
 function App() {
-  
+
+  const {IsLoggedIn,ActiveUser} = useAuth()
+
   return (
     <>
-      <div className="debug-screens h-96 sm:h-56 py-6 bg-gray-400 bg-cover bg-center">
-        <Header/>
-      </div>
+        <>
+          <Header/>
+          <div className="font-nunito text-xl px-2 py-4 flex items-center justify-center">
+          </div>
+        </>
     </>
   )
 }

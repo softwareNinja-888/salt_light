@@ -1,12 +1,12 @@
 import { Menu } from "./Menu.jsx"
-import { Link } from "react-router"
+import { Link, useLocation, useParams } from "react-router"
 import { useState } from "react"
 import { Search } from "./Search.jsx"
 import { Button } from "./Button.jsx"
 
 import { useAuth } from "./AuthContext.jsx"
 
-import { pages } from "../data/data.js";
+import { pages, util } from "../data/data.js";
 
 // import { motion } from "motion"
 
@@ -19,6 +19,13 @@ export function Header(){
 
     // TO DYANMICALLY DISPLAY CONTENT
     const {IsLoggedIn, login, logout,IsOpen,toggleMenu,ActiveUser} = useAuth()
+
+    const url = useLocation().pathname
+    const FormatUrl = url.substring(url.lastIndexOf('/'))
+    let page = FormatUrl.slice(FormatUrl.indexOf('/') + 1)
+
+    page = page === '' ? "Home" : util.capitilizeText(page)
+    page = page.includes('%') ? '' : page;
 
     // FUNCTIONS TO TOGGLE STATES
 
@@ -53,6 +60,10 @@ export function Header(){
                 {/* SEACRH */}
                 <Search/>
             </div>
+
+            
+            <div className="text-center text-2xl text-white underline font-nunito mt-20">{page}</div>
+
         </div>
         </>
     )

@@ -1,21 +1,20 @@
-import { Header } from "./Header.jsx";
-import place from '/donations/donateA1.webp'
 import { listingData } from "../data/data.js";
+import { useNavigate } from "react-router";
 export function Blog(){
 
+    const navigate = useNavigate()
     const data = listingData['blog']
     const formatedText = 'Blogs'
+
+    function handleNavigation(title){
+        navigate(`/pages/blog/${title}`)
+    }
     
     return (
         <>
-            {/* <div className="">
-                <Header/>
-                <div className="text-center text-2xl underline font-nunito mt-10">{formatedText}</div>
-            </div>         */}
-            
             <main>
                 {data.map(el=>{
-                   return( <div className="flex flex-col justify-center items-center w-8/12 border border-black rounded-2xl text-sm font-geist  m-auto mt-10 gap-5">
+                   return( <div key={el.id} onClick={()=>{handleNavigation(el.title)}} className="flex flex-col justify-center items-center w-8/12 border border-black rounded-2xl text-sm font-geist  m-auto mt-10 gap-5">
                         <div className="w-full">
                             <img src={el.imgUrl} alt='image' className="w-full h-64 rounded-t-2xl" loading="lazy"/>
                         </div>
