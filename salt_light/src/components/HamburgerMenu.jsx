@@ -1,12 +1,18 @@
 import close from '/new/closeWhite.webp'
-// import github from '/github.webp'
-// import insta from '/insta.png'
-// import linkedin from '/linkedin.png'
+import github from '/github.webp'
+import insta from '/insta.png'
+import linkedin from '/linkedin.png'
 
 import React from "react";
 import { motion } from "framer-motion";
+import { useAuth } from "./AuthContext.jsx"
 
 export function HamburgerMenu({ menuOpen, setMenuOpen }){
+
+  // AUTH CONTEXT
+
+  const {IsLoggedIn, login, logout,IsOpen,toggleMenu,ActiveUser} = useAuth()
+
   // Animation variants for menu
   const menuVariants = {
     open: {
@@ -20,6 +26,7 @@ export function HamburgerMenu({ menuOpen, setMenuOpen }){
       transition: { duration: 0.5, ease: "easeInOut" },
     },
   };
+   
 
   return (
     <>
@@ -45,24 +52,20 @@ export function HamburgerMenu({ menuOpen, setMenuOpen }){
 
         {/* Links */}
         <nav className="flex flex-col space-y-4 text-lg text-fontColor font-poppins items-center">
-          <a href="#home" className="hover:underline">Home</a>
-          <a href="#about" className="hover:underline">About Me</a>
-          <a href="#subscribe" className="hover:underline">Contact Me</a>
-          <a href="#projects" className="hover:underline">View Projects</a>
-
+          <a href="/pages/blog" className="hover:underline">Blogs</a>
+          <a href="/pages/events" className="hover:underline">Events</a>
+          <a href="/pages/donate" className="hover:underline">Donate</a>
+          <a href="/pages/churches" className="hover:underline">Churches</a>
         </nav>
         <div className="flex space-x-4 mt-16 gap-5">
           <a href="#" className="w-10">
-            {/* <img src={github} alt="github logo" className="" /> */}
-            hi 
+            <img src={github} alt="github logo" className="" /> 
           </a>
           <a href="#" className="w-10">
-            {/* <img src={linkedin} alt="github logo" className="w-20" />           */}
-            hi 
+            <img src={linkedin} alt="github logo" className="w-20" />           
           </a>
           <a href="#" className="w-10">
-            {/* <img src={insta} alt="github logo" className="" />           */}
-            hi 
+            <img src={insta} alt="github logo" className="" />           
           </a>
         </div>
       </motion.div>
