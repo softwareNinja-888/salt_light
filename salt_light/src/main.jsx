@@ -15,11 +15,11 @@ import { HandleBlog } from './components/HandleBlog.jsx'
 import { HandleDonate } from './components/HandleDonate.jsx'
 
 import { ScrollToTop } from './components/ScrollToTop.jsx'
+import { SearchResults } from './components/SearchResults.jsx'
 
 
 import './index.css'
 import { App } from './App.jsx'
-import { SearchResults } from './components/SearchResults.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
