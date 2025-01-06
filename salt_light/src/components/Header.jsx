@@ -27,13 +27,14 @@ export function Header(){
     page = page === '' ? "Home" : util.capitilizeText(page)
     page = page.includes('%') ? '' : page;
 
+
     // FUNCTIONS TO TOGGLE STATES
 
     return (
         <>
-            <div className="flex flex-col h-96 py-6 bg-gray-400 bg-cover bg-center">
+            <div className="flex flex-col h-full py-6 bg-gray-400 bg-cover bg-center">
             <div className="sm:flex sm:flex-row sm:justify-around">
-                <div className="flex justify-between px-2 mb-8">
+                <div className="flex justify-between px-2 mb-2">
 
                     {/* LOGO */}
                     <div className="flex flex-row-reverse items-center gap-1 cursor-pointer">
@@ -62,7 +63,7 @@ export function Header(){
             </div>
 
             
-            <div className="text-center text-2xl text-white underline font-nunito mt-20">{page}</div>
+            <div className="text-center text-2xl text-white underline font-nunito mt-20">{page === 'Search' ? `${page} Results` :page}</div>
 
         </div>
         </>

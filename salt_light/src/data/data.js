@@ -8,17 +8,34 @@ const util = (function (){
         return text.split(' ').map(word=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')
     }
 
-    function createChurch(id, name, contact, location, services, mission, imgUrl) {
+    // function createChurch(id, name, contact, location, services, mission, imgUrl) {
+    //     return {
+    //         id,
+    //         name,
+    //         contact,
+    //         location,
+    //         services,
+    //         mission,
+    //         imgUrl,
+    //         };
+    //     }  
+
+
+    function createChurch(id, name, denomination, location, position, contact, serviceTimes, services, websiteUrl,imgUrl, mission) {
         return {
             id,
             name,
-            contact,
+            denomination,
             location,
+            position,
+            contact,
+            serviceTimes,
             services,
-            mission,
+            websiteUrl,
             imgUrl,
-            };
-        }  
+            mission
+        };
+    }
     
    
     function createEvents(id, name, contact, location, services, mission, imgUrl) {
@@ -117,16 +134,16 @@ const pages = (function(){
 // LISTING INFORMATION 
 const listingData = (function(){
     let churches = [
-        util.createChurch( 1, "Grace Community Church", { phone: "123-456-7890", email: "contact@gracechurch.com" }, "123 Main Street, Springfield, IL", ["Sunday Service", "Youth Ministry", "Bible Study"], "To spread the gospel and nurture spiritual growth.", "/churches/churchA1.webp"), 
+        util.createChurch( 1,  "Grace Community Church",  "Non-Denominational",  "123 Main Street, Springfield, IL",  {lat:39.7817, lng:-89.6501},  { email: "info@gracecommunity.com", phone: "555-123-4567" },  ["Sunday 9:00 AM", "Sunday 11:00 AM", "Wednesday 7:00 PM"],  ["Youth Ministry", "Bible Study", "Community Outreach"],  "https://www.gracecommunity.com", "/churches/churchA1.webp",  "A welcoming community church focused on spreading the Gospel and serving the local community.",),
+ 
+        util.createChurch( 2, "Hope Chapel", "Non-Denominational",  "456 Elm Avenue, Greenville, SC",  {lat:26.5082, lng:31.3713},  { phone: "987-654-3210", email: "info@hopechapel.org" },  ["Sunday 9:00 AM", "Sunday 11:00 AM", "Wednesday 7:00 PM"], ["Morning Prayer", "Community Outreach", "Choir Practice"],  "https://www.gracecommunity.com", "/churches/churchB1.webp",  "To bring hope to the community through faith and service.",),
+
+        util.createChurch(3, "Faith Life Center", "Non-Denominational",   "789 Pine Road, Austin, TX",  {lat:39.7817, lng:-89.6501},  { phone: "555-678-1234", email: "hello@faithlife.org" },  ["Sunday 9:00 AM", "Sunday 11:00 AM", "Wednesday 7:00 PM"],["Worship Services", "Children's Ministry", "Marriage Counseling"],  "https://www.gracecommunity.com", "/churches/churchC1.webp" ,  "To empower individuals to live a life of faith and purpose.",),
+
+        util.createChurch( 4, "Light of the World Church",  "Non-Denominational",   "321 Oak Street, Miami, FL",  {lat:39.7817, lng:-89.6501},  { phone: "444-222-1111", email: "contact@lightworld.com" },  ["Sunday 9:00 AM", "Sunday 11:00 AM", "Wednesday 7:00 PM"],["Healing Services", "Discipleship Training", "Community Dinners"],  "https://www.gracecommunity.com",  "/churches/churchD1.webp" , "To be a beacon of light in the world, sharing God's love.",),
         
-        util.createChurch( 2, "Hope Chapel", { phone: "987-654-3210", email: "info@hopechapel.org" }, "456 Elm Avenue, Greenville, SC", ["Morning Prayer", "Community Outreach", "Choir Practice"], "To bring hope to the community through faith and service.", "/churches/churchB1.webp" ), 
-        
-        util.createChurch( 3, "Faith Life Center", { phone: "555-678-1234", email: "hello@faithlife.org" }, "789 Pine Road, Austin, TX", ["Worship Services", "Children's Ministry", "Marriage Counseling"], "To empower individuals to live a life of faith and purpose.", "/churches/churchC1.webp" ), 
-        
-        util.createChurch( 4, "Light of the World Church", { phone: "444-222-1111", email: "contact@lightworld.com" }, "321 Oak Street, Miami, FL", ["Healing Services", "Discipleship Training", "Community Dinners"], "To be a beacon of light in the world, sharing God's love.", "/churches/churchD1.webp" ), 
-        
-        util.createChurch( 5, "Kingdom Fellowship", { phone: "333-999-7777", email: "kingdom@fellowship.org" }, "654 Cedar Lane, Denver, CO", ["Evening Worship", "Men's Fellowship", "Missionary Support"], "To build a strong, united community rooted in the Kingdom of God.", "/churches/churchE1.webp" ) 
-       
+        util.createChurch(5, "Kingdom Fellowship",  "Non-Denominational",    "654 Cedar Lane, Denver, CO",  {lat:39.7817, lng:-89.6501},  { phone: "333-999-7777", email: "kingdom@fellowship.org" },  ["Sunday 9:00 AM", "Sunday 11:00 AM", "Wednesday 7:00 PM"],["Evening Worship", "Men's Fellowship", "Missionary Support"],  "https://www.gracecommunity.com", "/churches/churchE1.webp", "To build a strong, united community rooted in the Kingdom of God.",),
+
     ]
 
     let blog = [

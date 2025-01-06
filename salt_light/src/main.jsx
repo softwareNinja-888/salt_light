@@ -12,12 +12,14 @@ import { NotFound } from './components/NotFound.jsx'
 import { Layout } from './components/Layout.jsx'
 import { HandleElement } from './components/HandleElement.jsx'
 import { HandleBlog } from './components/HandleBlog.jsx'
+import { HandleDonate } from './components/HandleDonate.jsx'
 
 import { ScrollToTop } from './components/ScrollToTop.jsx'
 
 
 import './index.css'
 import { App } from './App.jsx'
+import { SearchResults } from './components/SearchResults.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -29,16 +31,20 @@ createRoot(document.getElementById('root')).render(
 
           <Route path='/pages' element={<Layout/>}>
 
+              {/* EVENT / CHURCH ROUTES */}
               <Route path=':page' element={<Listing/>} />
               <Route path=':page/:element' element={<HandleElement/>} />
 
+              {/* BLOG/DONATE ROUTES */}
               <Route path='blog' element={<Blog/>} />
               <Route path='blog/:title' element={<HandleBlog/>}/>
-   
 
               <Route path='donate' element={<Donate/>} />
+              <Route path='donate/:title' element={<HandleDonate/>} />
+
           </Route>  
 
+          <Route path='/search' element={<SearchResults/>}/>
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/profile/:name' element={<Profile/>}/>
           <Route path='/404' element={<NotFound/>}/>

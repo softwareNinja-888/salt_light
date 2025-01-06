@@ -1,6 +1,7 @@
 import { useParams } from "react-router"
 import { listingData } from "../data/data"
 import { v4 as uuidv4 } from "uuid"
+import {ChurchLocator} from './ChurchLocator'
 
 import phone from '/phone.webp'
 import email from '/email.webp'
@@ -52,6 +53,11 @@ export function HandleElement(){
                         {data.contact.email}
                     </div>
                 </div>
+            </div>
+
+            <div className="flex gap-10 flex-col">
+                <div className="text-xl text-center font-geist mt-6 underline">Church Location</div>
+                <ChurchLocator churches={[data]}/>
             </div>
         </>
     )

@@ -1,0 +1,59 @@
+import React, { useState } from "react";
+import { Editor, EditorState } from "draft-js";
+import "draft-js/dist/Draft.css"; // Default Draft.js styles
+
+const RichTextEditor = () => {
+  const [editorState, setEditorState] = useState(() =>
+    EditorState.createEmpty()
+  );
+
+  const handleEditorChange = (newState) => {
+    setEditorState(newState);
+  };
+
+  return (
+    <div className="p-4 border border-gray-300 rounded-md shadow-sm">
+      <div className="prose max-w-none bg-white p-2 min-h-[200px]">
+        <Editor editorState={editorState} onChange={handleEditorChange} />
+      </div>
+    </div>
+  );
+};
+
+export default RichTextEditor;
+
+
+
+<div className="p-4 border border-gray-300 rounded-md shadow-sm">
+  <div
+    className="prose max-w-none bg-white p-2 min-h-[200px] focus:outline-none"
+    onClick={() => editorRef.current.focus()}
+  >
+    <Editor ref={editorRef} editorState={editorState} onChange={handleEditorChange} />
+  </div>
+</div>
+
+
+
+
+import { EditorState, convertToRaw, convertFromRaw } from "draft-js";
+
+// Save content to localStorage
+const saveContent = (editorState) => {
+  const content = editorState.getCurrentContent();
+  const rawContent = JSON.stringify(convertToRaw(content));
+  localStorage.setItem("editorContent", rawContent);
+};
+
+// Load content from localStorage
+const loadContent = () => {
+  const savedContent = localStorage.getItem("editorContent");
+  if (savedContent) {
+    const contentState = convertFromRaw(JSON.parse(savedContent));
+    return EditorState.createWithContent(contentState);
+  }
+  return EditorState.createEmpty();
+};
+
+// Usage
+const [editorState, setEditorState] = useState(() => loadContent());
