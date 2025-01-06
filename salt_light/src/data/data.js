@@ -8,20 +8,7 @@ const util = (function (){
         return text.split(' ').map(word=>word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ')
     }
 
-    // function createChurch(id, name, contact, location, services, mission, imgUrl) {
-    //     return {
-    //         id,
-    //         name,
-    //         contact,
-    //         location,
-    //         services,
-    //         mission,
-    //         imgUrl,
-    //         };
-    //     }  
-
-
-    function createChurch(id, name, denomination, location, position, contact, serviceTimes, services, websiteUrl,imgUrl, mission) {
+    function createChurch(id, name, denomination, location, position, contact, serviceTimes, services, websiteUrl,imgUrl, mission,type='churches') {
         return {
             id,
             name,
@@ -33,12 +20,13 @@ const util = (function (){
             services,
             websiteUrl,
             imgUrl,
-            mission
+            mission,
+            type
         };
     }
     
    
-    function createEvents(id, name, contact, location, services, mission, imgUrl) {
+    function createEvents(id, name, contact, location, services, mission, imgUrl,type='events') {
         return {
             id,
             name,
@@ -47,10 +35,11 @@ const util = (function (){
             services,
             mission,
             imgUrl,
+            type,
         };
     }
 
-    function createDonationOption(id, title, description, amountOptions, imgUrl) {
+    function createDonationOption(id, title, description, amountOptions, imgUrl,type="donate") {
         const maxLength = 60; // Adjust this value to set the desired summary length
         const summary = description.length > maxLength
             ? description.slice(0, maxLength) + "..."
@@ -62,11 +51,12 @@ const util = (function (){
             description,
             amountOptions, // Array of suggested donation amounts
             imgUrl,
-            summary
+            summary,
+            type
         };
     }
 
-    function createBlog(id, title, author, date, content, tags, imgUrl) {
+    function createBlog(id, title, author, date, content, tags, imgUrl,type='blog') {
         const maxLength = 100; // Adjust this value to set the desired summary length
         const summary = content.length > maxLength
             ? content.slice(0, maxLength) + "..."
@@ -81,6 +71,7 @@ const util = (function (){
             content,
             tags,
             imgUrl,
+            type
         };
     }
 
