@@ -2,20 +2,23 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter,Routes,Route } from 'react-router'
 
-import { AuthProvider } from './components/AuthContext.jsx'
-import { Listing } from './components/Listing.jsx'
-import { Blog } from './components/Blog.jsx'
-import { Donate } from './components/Donate.jsx'
-import { SignUp } from './components/SignUp.jsx'
-import { Profile } from './components/Profile.jsx'
-import { NotFound } from './components/NotFound.jsx'
-import { Layout } from './components/Layout.jsx'
-import { HandleElement } from './components/HandleElement.jsx'
-import { HandleBlog } from './components/HandleBlog.jsx'
-import { HandleDonate } from './components/HandleDonate.jsx'
+import { AuthProvider } from './components/helper/AuthContext.jsx'
+import { ScrollToTop } from './components/helper/ScrollToTop.jsx'
 
-import { ScrollToTop } from './components/ScrollToTop.jsx'
-import { SearchResults } from './components/SearchResults.jsx'
+import { Layout } from './components/structure/Layout.jsx'
+import { Listing } from './components/structure/Listing.jsx'
+
+import { Blog } from './components/content/Blog.jsx'
+import { Donate } from './components/content/Donate.jsx'
+import { SignUp } from './components/content/SignUp.jsx'
+import { Profile } from './components/content/Profile.jsx'
+import { NotFound } from './components/content/NotFound.jsx'
+import { HandleElement } from './components/content/HandleElement.jsx'
+import { HandleBlog } from './components/content/HandleBlog.jsx'
+import { HandleDonate } from './components/content/HandleDonate.jsx'
+import { NearMe } from './components/content/NearMe.jsx'
+
+import { SearchResults } from './components/content/SearchResults.jsx'
 
 
 import './index.css'
@@ -41,6 +44,8 @@ createRoot(document.getElementById('root')).render(
 
               <Route path='donate' element={<Donate/>} />
               <Route path='donate/:title' element={<HandleDonate/>} />
+
+              <Route path='nearme' element={<NearMe/>}/>
 
           </Route>  
 

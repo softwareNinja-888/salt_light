@@ -1,8 +1,8 @@
 import { useSearchParams} from "react-router"
-import {Header} from './Header'
-import {ChurchLocator} from './ChurchLocator'
+import {Header} from '../structure/Header.jsx'
+import {ChurchLocator} from '../helper/ChurchLocator.jsx'
 
-import { listingData } from "../data/data.js";
+import { listingData } from "@data/data.js";
 export function SearchResults(){
     const searchParams = useSearchParams()
     const query = searchParams[0].get('q')

@@ -1,16 +1,13 @@
-import { Header } from "./Header.jsx"
-import { Menu } from "./Menu.jsx";
+import { Header } from "../structure/Header.jsx"
+import { Menu } from "../helper/Menu.jsx";
 import { Link } from "react-router"
-import { pages } from "../data/data.js";
-import { UserForm } from "./Form.jsx";
-
-
-
+import { pages } from "@data/data.js";
+import { UserForm } from "../helper/Form.jsx";
 
 import fish from '/fishWhite.webp'
 import place from '/place.webp'
 
-import { useAuth } from "./AuthContext.jsx"
+import { useAuth } from "../helper/AuthContext.jsx";
 export function SignUp(){
 
     const {IsLoggedIn,login,logout,IsOpen,toggleMenu} = useAuth()

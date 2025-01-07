@@ -1,4 +1,4 @@
-import { listingData } from "../data/data.js";
+import { listingData } from "@data/data.js";
 import { useNavigate } from "react-router";
 export function Blog(){
 

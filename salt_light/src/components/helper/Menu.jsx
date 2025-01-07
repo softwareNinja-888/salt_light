@@ -1,5 +1,5 @@
 // import { pages } from "../data/data.js";
-import { util } from "../data/data.js";
+import { util } from "@data/data.js";
 import { Link, NavLink } from "react-router";
 import React, { useState } from "react";
 import { motion } from "framer-motion";

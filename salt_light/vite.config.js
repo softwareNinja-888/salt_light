@@ -6,5 +6,11 @@ export default defineConfig({
   plugins: [react()],
   define: {
     global: {},
+  },
+  resolve: {
+    alias: {
+      '@components': '/src/components',
+      '@data': '/src/data',
+    }
   }
 })

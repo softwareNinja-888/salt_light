@@ -1,7 +1,7 @@
-import { useAuth } from "./AuthContext.jsx"
-import { Header } from "./Header.jsx" 
+import { useAuth } from "../helper/AuthContext.jsx"
+import { Header } from "../structure/Header.jsx" 
 import { useNavigate, useParams } from "react-router"
-import { listingData } from "../data/data.js";
+import { listingData } from "@data/data.js";
 import { useEffect } from "react";
 export function Profile(){
     const {name} = useParams()

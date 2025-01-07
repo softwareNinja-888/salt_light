@@ -1,5 +1,5 @@
 import React from "react";
-import { listingData } from "../data/data";
+import { listingData } from "@data/data.js";
 import { useNavigate } from "react-router";
 
 export function Highlights() {
@@ -18,7 +18,7 @@ export function Highlights() {
     }
 
     return (
-        <div className="py-10 bg-gray-100 text-center">
+        <div className="py-10 text-center">
             <h2 className="text-3xl font-bold mb-6">Highlights</h2>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
                 {highlights.map((highlight) => (

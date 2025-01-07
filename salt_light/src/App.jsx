@@ -1,11 +1,16 @@
 import { useState } from 'react'
-import { Header } from './components/Header.jsx'
 import './App.css'
 import { Link, useNavigate } from 'react-router'
-import { useAuth } from './components/AuthContext.jsx'
-import { ChurchLocator } from './components/ChurchLocator.jsx'
-import { Highlights } from './components/Highlights.jsx'
-import { Footer } from './components/Footer.jsx'
+
+import { Header } from './components/structure/Header.jsx'
+import { Footer } from './components/structure/Footer.jsx'
+
+import { useAuth } from './components/helper/AuthContext.jsx'
+import { ChurchLocator } from './components/helper/ChurchLocator.jsx'
+
+import { Highlights } from './components/content/Highlights.jsx'
+
+
 
 function App() {
 

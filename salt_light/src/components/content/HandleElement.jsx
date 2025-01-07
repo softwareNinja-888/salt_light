@@ -1,7 +1,7 @@
 import { useParams } from "react-router"
-import { listingData } from "../data/data"
+import { listingData } from "@data/data.js"
 import { v4 as uuidv4 } from "uuid"
-import {ChurchLocator} from './ChurchLocator'
+import {ChurchLocator} from '../helper/ChurchLocator'
 
 import phone from '/phone.webp'
 import email from '/email.webp'

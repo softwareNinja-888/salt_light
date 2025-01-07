@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { util, listingData } from "../data/data.js"
+import { util, listingData } from "@data/data.js"
 import { useNavigate } from "react-router";
-import { useAuth } from "./AuthContext.jsx";
+import { useAuth } from "../helper/AuthContext.jsx";
 
 const UserForm = () => {
     const navigate = useNavigate()

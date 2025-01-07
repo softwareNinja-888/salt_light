@@ -1,6 +1,6 @@
 import { Outlet, useParams } from "react-router"
-import { listingData } from "../data/data.js"
-import { util } from "../data/data.js"
+import { listingData ,util} from "@data/data.js"
+// import { util } from "../data/data.js"
 import { useNavigate } from "react-router"
 
 import phone from '/phone.webp'

@@ -5,7 +5,7 @@ import linkedin from '/linkedin.png'
 
 import React from "react";
 import { motion } from "framer-motion";
-import { useAuth } from "./AuthContext.jsx"
+import { useAuth } from "../helper/AuthContext"
 
 export function HamburgerMenu({ menuOpen, setMenuOpen }){
 
@@ -56,6 +56,11 @@ export function HamburgerMenu({ menuOpen, setMenuOpen }){
           <a href="/pages/events" className="hover:underline">Events</a>
           <a href="/pages/donate" className="hover:underline">Donate</a>
           <a href="/pages/churches" className="hover:underline">Churches</a>
+            {IsLoggedIn ? <a href={`/profile/${ActiveUser}`}>Profile</a>:
+                          <>
+                            <a href="/signup">Login/SignUp</a>
+                          </>
+            }  
         </nav>
         <div className="flex space-x-4 mt-16 gap-5">
           <a href="#" className="w-10">

@@ -1,5 +1,5 @@
 import { useParams } from "react-router";
-import { listingData } from "../data/data";
+import { listingData } from "@data/data.js";
 import React, { useState } from 'react';
 
 
