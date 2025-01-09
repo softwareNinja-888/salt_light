@@ -1,10 +1,17 @@
 import React from "react";
 
+import church from "/churches/churchA1.webp";
+import church2 from "/churches/churchC1.webp";
+
+import believer from "/believers/believerA1.jpg";
+import believer1 from "/believers/believerB1.jpg";
+import believer2 from "/believers/believerC1.jpg";
+
 export function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      logo: "/path-to-church-logo1.png", // Replace with actual church logo
+      logo: believer1, // Replace with actual church logo
       quote:
         "Salt & Light Ministries helped our church connect with hundreds of believers. Truly a blessing!",
       author: "Pastor John Doe",
@@ -14,7 +21,7 @@ export function Testimonials() {
     },
     {
       id: 2,
-      logo: "/path-to-church-logo2.png", // Replace with actual ministry logo
+      logo: church2, // Replace with actual ministry logo
       quote:
         "Through this platform, we discovered incredible ministry resources that have enriched our outreach.",
       author: "Sarah Jane",
@@ -39,7 +46,7 @@ export function Testimonials() {
             <img
               src={item.logo}
               alt={`${item.author}'s Ministry Logo`}
-              className="h-6 w-auto mb-4"
+              className="h-44 w-auto mb-4"
             />
             {/* Quote */}
             <p className="text-lg font-semibold text-gray-800 mb-4">
