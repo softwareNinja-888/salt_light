@@ -11,6 +11,7 @@ import { ChurchLocator } from './components/helper/ChurchLocator.jsx'
 import { Highlights } from './components/content/Highlights.jsx'
 import { Info } from './components/content/Info.jsx'
 
+import { Testimonials } from './components/content/Testimonials.jsx'
 
 
 
@@ -24,6 +25,7 @@ function App() {
           <Header/>
           <Highlights/>
           <Info/>
+          <Testimonials/>
           <Footer/>
         </>
     </>

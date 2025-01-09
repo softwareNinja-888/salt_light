@@ -9,7 +9,7 @@ import { Check } from "../helper/Check.jsx"
 
 
 const FeatureItem = ({ text }) => (
-  <li className="flex items-center">
+  <li className="flex items-center gap-2">
     <Check/>
     {text}
   </li>
@@ -22,7 +22,7 @@ const ChurchCard = ({ image, label }) => (
       alt={label}
       className="rounded-xl w-32 h-32 object-cover shadow-md"
     />
-    <span className="absolute -top-4 left-8 bg-white text-gray-800 text-sm font-medium px-3 py-1 rounded-full shadow-md">
+    <span className="absolute -top-4 left-8 bg-white text-gray-800 text-xs font-poppins px-3 py-1 rounded-full shadow-md">
       {label}
     </span>
   </div>
@@ -34,16 +34,16 @@ export function Info() {
   return (
     <section className="bg-theme text-white py-10 px-6 md:px-16 lg:px-24">
       <div className="flex flex-col lg:flex-row items-center lg:justify-between">
-        <div className="flex flex-col lg:w-1/2 space-y-6">
-          <h1 className="text-4xl font-bold">
+        <div className="flex flex-col lg:w-1/2 space-y-6 mb-20">
+          <h1 className="text-4xl font-lora">
             Connect with 50,000+ believers and ministries through{" "}
             <span className="text-green-600">Salt & Light Ministries</span>.
           </h1>
-          <p className="text-lg">
+          <p className="text-lg font-roboto">
             Your gateway to discovering local churches, Christian organizations,
             and resources to grow in faith.
           </p>
-          <ul className="space-y-3 text-lg">
+          <ul className="space-y-3 text-lg font-poppins">
             <FeatureItem text="Find churches near you" />
             <FeatureItem text="Access trusted Christian resources" />
             <FeatureItem text="Connect with believers worldwide" />
@@ -55,7 +55,7 @@ export function Info() {
 
         <div className="lg:w-1/2 mt-10 lg:mt-0 flex justify-center relative">
           <div className="grid grid-cols-2 gap-4 items-center">
-            <ChurchCard image={church} label="Church" />
+            <ChurchCard image={church} label="Churches" />
             <ChurchCard image={church2} label="Ministry Resources" />
 
             <div className="relative col-span-2 flex items-center space-x-2 mt-4">
