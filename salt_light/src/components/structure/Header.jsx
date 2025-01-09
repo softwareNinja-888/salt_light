@@ -10,7 +10,8 @@ import { HamburgerMenu } from "../helper/HamburgerMenu.jsx"
 
 import { pages, util } from "@data/data.js";
 
-import fish from '/fishWhite.webp'
+import fish from '/fish.webp'
+import logo from '/logo.webp'
 export function Header(){
 
     // TO DYANMICALLY DISPLAY CONTENT
@@ -45,13 +46,17 @@ export function Header(){
                 <div className="sm:flex sm:flex-row sm:justify-around mb-10 z-100">
                    
 
-                    <div className="flex items-center justify-between px-6 mb-2 z-100">
+                    <div className="flex items-center justify-between px-3 mb-2 z-100">
                         {/* LOGO */}
-                        <div className="flex flex-row-reverse items-center gap-1 cursor-pointer">
-                            <img src={fish} alt="fish logo" className="w-5 h-5 rotate-180" />
+                    {/*
+                        <div className="flex flex-row-reverse items-center gap-2 cursor-pointer">
+                            <img src={fish} alt="fish logo" className="w-6 h-6 rotate-180" />
                             <Link to={'/'} className="text-2xl font-nunito text-black">Salt&amp;Light</Link>
                         </div>
-
+                    */}
+                    <div>
+                        <img src={logo} alt="fish logo" className=" h-10"/>
+                    </div>
                         {/* BUTTONS */}
 
                         <div className="">
