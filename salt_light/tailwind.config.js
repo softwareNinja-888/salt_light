@@ -17,8 +17,11 @@ export default {
         roboto: ['roboto','sans-serif'],
       },
       backgroundImage: {
-        'header': "url('/bg/bgC1.jpg')",
+        'header': "url('/bg/bgF1.jpg')",
         'header2': "url('/bg/bg1.jpg')"
+      },
+      backgroundColor: {
+        'theme': '#17282f'
       }
     },
   },

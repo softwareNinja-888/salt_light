@@ -9,6 +9,8 @@ import { useAuth } from './components/helper/AuthContext.jsx'
 import { ChurchLocator } from './components/helper/ChurchLocator.jsx'
 
 import { Highlights } from './components/content/Highlights.jsx'
+import { Info } from './components/content/Info.jsx'
+
 
 
 
@@ -21,6 +23,7 @@ function App() {
         <>
           <Header/>
           <Highlights/>
+          <Info/>
           <Footer/>
         </>
     </>

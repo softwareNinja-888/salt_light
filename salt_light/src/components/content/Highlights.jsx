@@ -34,7 +34,7 @@ export function Highlights() {
                         <h3 className="text-xl font-poppins">{highlight.name || highlight.title}</h3>
                         <p className="text-gray-600 mt-2 text-start font-roboto">{highlight.description || highlight.mission || highlight.summary}</p>
                         <div className="flex justify-center gap-10 mt-3">
-                            <button className="font-nunito mt-4 px-8 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 w-8/12" onClick={()=>{handleNavigation(highlight)}}>
+                            <button className="font-nunito mt-4 px-8 py-2 bg-theme text-white rounded hover:bg-blue-600 w-8/12" onClick={()=>{handleNavigation(highlight)}}>
                                 Explore
                             </button>
                           
