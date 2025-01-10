@@ -1,5 +1,5 @@
 import logo from '/logo.webp'
-import logo2 from '/logo2.jpeg'
+import logo2 from '/logo2.webp'
 import { SocialLinks } from "../helper/SocialLinks.jsx"
 
 

@@ -1,9 +1,9 @@
 
 import church from "/churches/churchA1.webp";
 import church2 from "/churches/churchC1.webp";
-import believer from "/believers/believerA1.jpg";
-import believer1 from "/believers/believerB1.jpg";
-import believer2 from "/believers/believerC1.jpg";
+import believer from "/believers/believerA1.webp";
+import believer1 from "/believers/believerB1.webp";
+import believer2 from "/believers/believerC1.webp";
 
 import { Check } from "../helper/Check.jsx"
 
