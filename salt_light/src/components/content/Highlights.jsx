@@ -8,11 +8,15 @@ export function Highlights() {
     const navigate = useNavigate()
 
     const highlights = [
-        listingData.churches[util.randomIndex(util.getCount(listingData.churches))],
-        listingData.events[util.randomIndex(util.getCount(listingData.events))],
-        listingData.blog[util.randomIndex(util.getCount(listingData.blog))],
-        listingData.donate[util.randomIndex(util.getCount(listingData.donate))],
+        listingData.churches[returnIndex(listingData.churches)],
+        listingData.events[returnIndex(listingData.events)],
+        listingData.blog[returnIndex(listingData.blog)],
+        listingData.donate[returnIndex(listingData.donate)],
     ];
+
+    function returnIndex(arr){
+        return util.randomIndex(util.getCount(arr))
+    }
 
     function handleNavigation(highlight) {
         navigate(`/pages/${highlight.type}/${highlight.name}`)
