@@ -7,6 +7,7 @@ import menu from '/new/lightMenu.webp'
 import { useAuth } from '../helper/AuthContext.jsx'
 
 import { HamburgerMenu } from "../helper/HamburgerMenu.jsx"
+import { Search } from "../helper/Search.jsx"
 
 import { pages, util } from "@data/data.js";
 
@@ -20,10 +21,8 @@ export function Header(){
     const navigate = useNavigate()
 
     // MENU STATE
-
-    const [menuOpen, setMenuOpen] = useState(false);
     
-    const {IsLoggedIn, login, logout,IsOpen,toggleMenu,ActiveUser} = useAuth()
+    const {IsLoggedIn, login, logout,menuOpen, setMenuOpen,ActiveUser} = useAuth()
 
     const url = useLocation().pathname
     const FormatUrl = url.substring(url.lastIndexOf('/'))
@@ -31,7 +30,6 @@ export function Header(){
 
     page = page === '' ? "Home" : util.capitilizeText(page)
     page = page.includes('%') ? '' : page;
-
 
     // HANDLE FIND CHURCH
 
@@ -73,17 +71,30 @@ export function Header(){
                 <div className={` relative flex flex-col justify-center items-center ${background[util.randomIndex(index)]} bg-bottom-left bg-cover py-20`}>
                     <div className="absolute inset-0 bg-black bg-opacity-40 pointer-events-none"></div>
                     <div className="relative z-10 text-center flex flex-col justify-center items-center">
-                        <h1 className="text-3xl font-poppins">Connecting Believers, Empowering Ministries</h1>
-                        <p className="mt-7 text-sm font-geist w-9/12 text-center">Discover churches, Ministries and resources near you. Your journey of faith starts here! </p>
-                        <div className="flex justify-center gap-5 mt-8">
-                            <button onClick={handleRedirect} className="mt-6 px-4 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-gray-200 text-sm">
-                                Find Church Near You
-                            </button>
-                            <button onClick={handleRedirect} className="mt-6 px-4 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-gray-200 text-sm">
-                                Explore Ministries
-                            </button>
+                        {page === "Home" || page === "Aboutus" ? (
+                            <>
+                            <h1 className="text-3xl font-poppins">Connecting Believers, Empowering Ministries</h1>
+                            <p className="mt-7 text-sm font-geist w-9/12 text-center">Discover churches, Ministries and resources near you. Your journey of faith starts here! </p>
+                            <div className="flex justify-center gap-5 mt-8">
+                                <button onClick={handleRedirect} className="mt-6 px-4 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-gray-200 text-sm">
+                                    Find Church Near You
+                                </button>
+                                <button onClick={handleRedirect} className="mt-6 px-4 py-3 bg-green-500 text-white rounded shadow-lg hover:bg-gray-200 text-sm">
+                                    Explore Ministries
+                                </button>
+                            </div>
+                            </>
+                        ) :  (
+                            <>
+                                <div className="flex flex-col gap-5">
+                                    <div className="text-xl font-poppins">
+                                        Search for {page}
+                                    </div>
+                                    <Search/>
+                                </div>
+                            </>
+                            )}
                         </div>
-                    </div>
                 
                     
                 </div>
