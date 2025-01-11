@@ -1,17 +1,19 @@
 import close from '/new/closeWhite.webp'
-import github from '/github.webp'
-import insta from '/insta.png'
-import linkedin from '/linkedin.png'
+
+import insta from '/instagram.png'
+import x from '/x.png'
+import facebook from '/facebook.png'
 
 import React from "react";
 import { motion } from "framer-motion";
 import { useAuth } from "../helper/AuthContext"
+import { useNavigate } from "react-router"
 
 export function HamburgerMenu({ menuOpen, setMenuOpen }){
 
   // AUTH CONTEXT
 
-  const {IsLoggedIn, login, logout,IsOpen,toggleMenu,ActiveUser} = useAuth()
+  const {IsLoggedIn, login, logout,ActiveUser} = useAuth()
 
   // Animation variants for menu
   const menuVariants = {
@@ -26,13 +28,20 @@ export function HamburgerMenu({ menuOpen, setMenuOpen }){
       transition: { duration: 0.5, ease: "easeInOut" },
     },
   };
+
+  const navigate = useNavigate()
+
+  function handleNavigation(path){
+    navigate(path)
+    setMenuOpen()
+  }
    
 
   return (
     <>
       {/* Background Overlay */}
       <motion.div
-        className="fixed inset-0 bg-black bg-opacity-100 z-40"
+        className="fixed inset-0 bg-theme bg-opacity-100 z-40"
         initial={{ opacity: 0 }}
         animate={{ opacity: menuOpen ? 1 : 0 }}
         transition={{ duration: 0.5 }}
@@ -52,25 +61,25 @@ export function HamburgerMenu({ menuOpen, setMenuOpen }){
 
         {/* Links */}
         <nav className="flex flex-col space-y-4 text-lg text-fontColor font-poppins items-center">
-          <a href="/pages/blog" className="hover:underline">Blogs</a>
-          <a href="/pages/events" className="hover:underline">Events</a>
-          <a href="/pages/donate" className="hover:underline">Donate</a>
-          <a href="/pages/churches" className="hover:underline">Churches</a>
-            {IsLoggedIn ? <a href={`/profile/${ActiveUser}`}>Profile</a>:
+          <div onClick={()=>{handleNavigation("/pages/blog")}} className="hover:underline">Blogs</div>
+          <div onClick={()=>{handleNavigation("/pages/events")}}className="hover:underline">Events</div>
+          <div onClick={()=>{handleNavigation("/pages/donate")}} className="hover:underline">Donate</div>
+          <div onClick={()=>{handleNavigation("/pages/churches")}} className="hover:underline">Churches</div>
+            {IsLoggedIn ? <div onClick={()=>{handleNavigation(`profile/${ActiveUser}`)}}>Profile</div>:
                           <>
-                            <a href="/signup">Login/SignUp</a>
+                            <div onClick={()=>{handleNavigation("/signup")}}>Login/SignUp</div>
                           </>
             }  
         </nav>
         <div className="flex space-x-4 mt-16 gap-5">
           <a href="#" className="w-10">
-            <img src={github} alt="github logo" className="" /> 
+            <img src={facebook} alt="facebook logo" className="" /> 
           </a>
           <a href="#" className="w-10">
-            <img src={linkedin} alt="github logo" className="w-20" />           
+            <img src={x} alt="x logo" className="w-20" />           
           </a>
           <a href="#" className="w-10">
-            <img src={insta} alt="github logo" className="" />           
+            <img src={insta} alt="insta logo" className="" />           
           </a>
         </div>
       </motion.div>

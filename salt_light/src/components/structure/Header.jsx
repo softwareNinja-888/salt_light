@@ -45,7 +45,7 @@ export function Header(){
 
     const background = ['bg-header','bg-header1','bg-header2','bg-header3','bg-header4',]
     const index = background.length - 1
-    console.log(index)
+
 
     return (
         <>
@@ -70,7 +70,7 @@ export function Header(){
                         
                     </div>                    
                 </div>
-                <div className={` relative flex flex-col justify-center items-center ${background[Math.floor(Math.random() * (index))]} bg-bottom-left bg-cover py-20`}>
+                <div className={` relative flex flex-col justify-center items-center ${background[util.randomIndex(index)]} bg-bottom-left bg-cover py-20`}>
                     <div className="absolute inset-0 bg-black bg-opacity-40 pointer-events-none"></div>
                     <div className="relative z-10 text-center flex flex-col justify-center items-center">
                         <h1 className="text-3xl font-poppins">Connecting Believers, Empowering Ministries</h1>

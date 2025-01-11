@@ -104,7 +104,16 @@ const util = (function (){
         return `${formatAmount}`
     }
 
-    return {capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney,createUser}
+    function randomIndex(index){
+        return Math.floor(Math.random() * (index))
+    }
+
+
+    function getCount(arr){
+        return arr.length
+    }
+
+    return {getCount,capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney,createUser,randomIndex}
 })()
 
 
@@ -242,6 +251,9 @@ const listingData = (function(){
     let users = [
         {name:'jamiew',email:'hi@mail',role:'mail',password:'ji'},
     ]
+
+
+
     
     return {churches,blog,donate,events,users}
 

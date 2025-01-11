@@ -26,6 +26,9 @@ export default {
       },
       backgroundColor: {
         'theme': '#17282f'
+      },
+      colors: {
+        secondary : '#17282f'
       }
     },
   },
