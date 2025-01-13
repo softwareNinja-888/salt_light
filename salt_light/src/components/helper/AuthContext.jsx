@@ -7,12 +7,15 @@ const AuthContext = createContext();
 // AuthProvider Component
 export function AuthProvider({ children }) {
   const [IsLoggedIn, setIsLoggedIn] = useState(false);
-  const [IsOpen,setIsOpen] = useState(false)
+  // const [IsOpen,setIsOpen] = useState(false)
   const [ActiveUser,setActiveUser] = useState(null)
 
-  function toggleMenu(){
-    setIsOpen(!IsOpen)
-  }
+  const [menuOpen, setMenuOpen] = useState(false);
+
+
+  // function toggleMenu(){
+  //   setIsOpen(!IsOpen)
+  // }
 
   function signup(userData){
     setIsLoggedIn(true);
@@ -25,7 +28,7 @@ export function AuthProvider({ children }) {
   }
 
   return (
-    <AuthContext.Provider value={{ IsLoggedIn, signup, logout,IsOpen,toggleMenu,ActiveUser }}>
+    <AuthContext.Provider value={{ IsLoggedIn, signup, logout,menuOpen,setMenuOpen,ActiveUser }}>
       {children}
     </AuthContext.Provider>
   );

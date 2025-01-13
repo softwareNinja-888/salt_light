@@ -1,0 +1,11 @@
+todo:
+
++ Get data for church based on location
+	+ Get location in proper format
+	+ Use location to display map
+	+ Show markers of churches in area
+
++ Then try get event data 
++ Laptop responsive
+
++ Verse section

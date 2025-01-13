@@ -78,12 +78,12 @@ export function Search() {
         id="searchInput"
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
-        className="w-10/12 px-4 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
+        className="text-black w-12/12 px-4 py-2 pr-10 border border-gray-300 rounded-md focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-blue-500"
       />
 
       {/* Animated Clear Button */}
       <motion.div
-        className="absolute inset-y-0 flex items-center text-gray-500 hover:text-gray-700 right-10"
+        className="absolute inset-y-0 flex items-center text-gray-500 hover:text-gray-700 right-2 bottom-12"
         whileHover={{ scale: 1.2, rotate: 90 }}
         whileTap={{ scale: 0.9 }}
       >

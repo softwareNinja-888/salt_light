@@ -12,6 +12,8 @@ import { Highlights } from './components/content/Highlights.jsx'
 import { Info } from './components/content/Info.jsx'
 
 import { Testimonials } from './components/content/Testimonials.jsx'
+import { Verse } from './components/content/Verse.jsx'
+
 
 
 
@@ -26,6 +28,7 @@ function App() {
           <Highlights/>
           <Info/>
           <Testimonials/>
+          <Verse/>
           <Footer/>
         </>
     </>

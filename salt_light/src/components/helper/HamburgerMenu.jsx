@@ -64,6 +64,7 @@ export function HamburgerMenu({ menuOpen, setMenuOpen }){
           <div onClick={()=>{handleNavigation("/pages/blog")}} className="hover:underline">Blogs</div>
           <div onClick={()=>{handleNavigation("/pages/events")}}className="hover:underline">Events</div>
           <div onClick={()=>{handleNavigation("/pages/donate")}} className="hover:underline">Donate</div>
+          <div onClick={()=>{handleNavigation("/aboutus")}} className="hover:underline">About Us</div>
           <div onClick={()=>{handleNavigation("/pages/churches")}} className="hover:underline">Churches</div>
             {IsLoggedIn ? <div onClick={()=>{handleNavigation(`profile/${ActiveUser}`)}}>Profile</div>:
                           <>

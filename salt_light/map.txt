@@ -1,0 +1,57 @@
+Salt & Light Ministries
+│
+├── Home Page
+│   ├── Header (Logo, Navigation)
+│   ├── Main Banner (Image or Video)
+│   ├── Welcome Message
+│   └── Call to Action (e.g., Join, Learn More)
+│
+├── Church Listings
+│   ├── Search Bar
+│   ├── Church Categories (e.g., Denominations)
+│   ├── Church Details (Name, Address, Contact Info)
+│   ├── Church Map (Interactive Map with Locations)
+│   └── Filters (Distance, Denomination, Location)
+│
+├── Blog Section (Bible Study)
+│   ├── Blog Posts
+│   ├── Post Categories (e.g., Sermons, Devotions)
+│   ├── Comment Section
+│   ├── Search Function for Posts
+│   └── Featured Post Highlight
+│
+├── Testimonials
+│   ├── User Reviews
+│   ├── Christian Impact Stories
+│   └── Scripture-based Testimonials
+│
+├── About Us
+│   ├── Mission Statement
+│   ├── Core Beliefs
+│   ├── History
+│   └── Team Members
+│
+├── Contact Us
+│   ├── Contact Form
+│   ├── Email
+│   ├── Phone Number
+│   └── Social Media Links
+│
+├── Prayer Request
+│   ├── Submit Prayer Requests
+│   ├── Pray for Others (Option to Help)
+│   └── Display Prayers Submitted
+│
+├── Footer
+│   ├── Copyright Information
+│   ├── Privacy Policy
+│   ├── Terms of Service
+│   └── Social Media Icons
+│
+└── Admin Dashboard (For managing content)
+    ├── Church Listings Management
+    ├── Blog Post Management
+    ├── Testimonial Management
+    ├── Prayer Request Monitoring
+    └── User Management
+

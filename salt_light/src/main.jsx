@@ -17,6 +17,7 @@ import { HandleElement } from './components/content/HandleElement.jsx'
 import { HandleBlog } from './components/content/HandleBlog.jsx'
 import { HandleDonate } from './components/content/HandleDonate.jsx'
 import { NearMe } from './components/content/NearMe.jsx'
+import { AboutUs } from './components/content/AboutUs.jsx'
 
 import { SearchResults } from './components/content/SearchResults.jsx'
 
@@ -53,6 +54,7 @@ createRoot(document.getElementById('root')).render(
           <Route path='/signup' element={<SignUp/>}/>
           <Route path='/profile/:name' element={<Profile/>}/>
           <Route path='/404' element={<NotFound/>}/>
+          <Route path='/aboutus' element={<AboutUs/>} />
   
         </Routes>
       </BrowserRouter>
