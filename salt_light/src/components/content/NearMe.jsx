@@ -1,5 +1,8 @@
 import { Header } from "../structure/Header";
 import { useAuth } from '../helper/AuthContext.jsx'
+import { ChurchCard } from '../content/ChurchCard.jsx'
+import { useNavigate } from "react-router"
+
 
 import React, { createContext, useContext, useState,useEffect } from 'react';
 
@@ -54,15 +57,22 @@ export function NearMe(){
 
     console.log(churches)
     
+    const navigate = useNavigate()
+
+
+    function handleNavigation(church){
+        navigate(`/pages/${title || page}/${church}`)
+    }
+
     if (loading) {
         return <div>Loading churches...</div>;
     }
 
     return(
         <>
-            <div className="">
-               {churches.map(el=>{
-                return <div key={el.fsq_id} className="">{el.name}</div>
+             <div className="">  
+             {churches.map(el=>{
+                return <ChurchCard key={el.fsq_id} obj={el}/>
                })}
             </div>
 
