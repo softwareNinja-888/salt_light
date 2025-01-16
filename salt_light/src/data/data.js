@@ -113,7 +113,30 @@ const util = (function (){
         return arr.length
     }
 
-    return {getCount,capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney,createUser,randomIndex}
+    async function getLocation(latitude, longitude) {
+        const apiKey = '41dc73de086e480abc0482e32ae1c2a3'; 
+        const url = `https://api.opencagedata.com/geocode/v1/json?q=${latitude},${longitude}&key=${apiKey}`;
+
+        try {
+            const response = await fetch(url);
+            if (!response.ok) {
+              throw new Error('Failed to fetch location data');
+        }
+
+        const data = await response.json();
+
+        if (data.results && data.results.length > 0) {
+            return data.results[0].formatted;
+        } else {
+            throw new Error('No location data found for the given coordinates');
+        }
+        } catch (error) {
+            console.error('Error:', error.message);
+            return null; // Return null if an error occurs
+          }
+        };
+
+    return {getLocation,getCount,capitilizeText,createChurch,createEvents,createDonationOption,createBlog,formatMoney,createUser,randomIndex}
 })()
 
 

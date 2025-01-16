@@ -28,8 +28,8 @@ export function AuthProvider({ children }) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
           setLocation({
-            latitude: 40.6782,
-            longitude: -73.9442,
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
           });
         },
         (error) => {

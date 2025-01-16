@@ -65,12 +65,16 @@ export function NearMe(){
     }
 
     if (loading) {
-        return <div>Loading churches...</div>;
+        return (
+            <div className="flex justify-center items-center">
+                <div className="w-16 h-16 border-4 border-green-500 border-dashed rounded-full animate-spin"></div>
+            </div>
+        )
     }
 
     return(
         <>
-             <div className="">  
+             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 w-12/12 justify-items-center">  
              {churches.map(el=>{
                 return <ChurchCard key={el.fsq_id} obj={el}/>
                })}
